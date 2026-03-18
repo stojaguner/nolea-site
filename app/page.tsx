@@ -3,7 +3,14 @@ export default function NoleaSite() {
     <div className="min-h-screen bg-[#f5f0e8] text-[#2c2416]">
       <header className="sticky top-0 z-30 border-b border-[#c8b89a]/60 bg-[#f5f0e8]/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
-          <div className="text-xl tracking-[0.28em] font-serif">NOLÉA</div>
+          <svg width="160" height="36" viewBox="0 0 260 50" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="38" fontFamily="Georgia, serif" fontSize="36" letterSpacing="3" fill="#2c2416">N</text>
+            <ellipse cx="61" cy="23" rx="17" ry="20" fill="#f5f0e8" stroke="#2c2416" strokeWidth="1.8"/>
+            <path d="M46 19 Q53 13 61 19 Q69 25 76 19" fill="none" stroke="#9c8672" strokeWidth="1.1" clipPath="url(#b1)"/>
+            <path d="M46 28 Q53 22 61 28 Q69 34 76 28" fill="none" stroke="#c8b89a" strokeWidth="0.8" clipPath="url(#b1)"/>
+            <clipPath id="b1"><ellipse cx="61" cy="23" rx="15" ry="18"/></clipPath>
+            <text x="81" y="38" fontFamily="Georgia, serif" fontSize="36" letterSpacing="3" fill="#2c2416">LÉA</text>
+          </svg>
           <nav className="hidden gap-8 text-sm md:flex text-[#6b5744]">
             <a href="#product" className="hover:text-[#2c2416]">Aqua Veil™</a>
             <a href="#science" className="hover:text-[#2c2416]">Science</a>
