@@ -15,7 +15,6 @@ export default function NoleaSite() {
           </a>
         </div>
       </header>
-
       <main>
         <section className="mx-auto grid max-w-7xl gap-14 px-6 py-16 md:grid-cols-2 md:px-10 md:py-24">
           <div className="flex flex-col justify-center">
@@ -41,7 +40,6 @@ export default function NoleaSite() {
               <span>Pediatric-informed</span>
             </div>
           </div>
-
           <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] bg-[#ede5d8] p-8 shadow-sm md:min-h-[680px]">
             <div className="relative mx-auto mt-12 flex h-full max-w-sm items-center justify-center">
               <div className="relative h-[420px] w-[220px] rounded-[2.5rem] border border-[#c8b89a] bg-[#f5f0e8] shadow-xl">
@@ -49,18 +47,13 @@ export default function NoleaSite() {
                 <div className="px-8 pt-16 text-center">
                   <div className="font-serif text-3xl tracking-[0.18em]">NOLÉA</div>
                   <div className="mt-6 font-serif text-2xl italic">Aqua Veil™</div>
-                  <div className="mt-4 text-sm uppercase tracking-[0.22em] text-[#9c8672]">
-                    Barrier Shield Mist
-                  </div>
-                  <div className="mt-16 text-xs leading-6 text-[#9c8672]">
-                    Ectoin • Antioxidant Defense • Barrier Support
-                  </div>
+                  <div className="mt-4 text-sm uppercase tracking-[0.22em] text-[#9c8672]">Barrier Shield Mist</div>
+                  <div className="mt-16 text-xs leading-6 text-[#9c8672]">Ectoin • Antioxidant Defense • Barrier Support</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
         <section className="border-y border-[#c8b89a]/60 bg-[#ede5d8]">
           <div className="mx-auto grid max-w-7xl gap-8 px-6 py-8 text-sm uppercase tracking-[0.22em] text-[#9c8672] md:grid-cols-4 md:px-10">
             <div>Pre + post swim</div>
@@ -69,7 +62,6 @@ export default function NoleaSite() {
             <div>Modern European aesthetic</div>
           </div>
         </section>
-
         <section id="product" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
           <div className="grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-center">
             <div>
@@ -83,4 +75,82 @@ export default function NoleaSite() {
                   <h3 className="font-medium">When to use</h3>
                   <p className="mt-3 text-sm leading-6 text-[#6b5744]">Before swim for barrier support. Reapply after towel drying or post-rinse as needed.</p>
                 </div>
-                <div className="rounded-3xl border border-[#
+                <div className="rounded-3xl border border-[#c8b89a] bg-[#ede5d8] p-6">
+                  <h3 className="font-medium">Texture</h3>
+                  <p className="mt-3 text-sm leading-6 text-[#6b5744]">A fine, weightless mist with no residue, no stickiness, and no added fragrance.</p>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-[2rem] border border-[#c8b89a] bg-[#ede5d8] p-8">
+              <div className="space-y-8">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.24em] text-[#9c8672]">How to use</p>
+                  <p className="mt-3 text-sm leading-7 text-[#6b5744]">Mist onto clean skin before swim. Reapply after towel drying or post-rinse as needed.</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.24em] text-[#9c8672]">Made for</p>
+                  <p className="mt-3 text-sm leading-7 text-[#6b5744]">Children's delicate skin, frequent swimmers, pool days, beach days, and everyday environmental exposure.</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.24em] text-[#9c8672]">Future ritual</p>
+                  <p className="mt-3 text-sm leading-7 text-[#6b5744]">Aqua Veil™ will be joined by Barrier Restore Cream and Mineral Wash to complete the NOLÉA water-exposed skin ritual.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="science" className="bg-[#ede5d8]">
+          <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#9c8672]">Why it works</p>
+            <h2 className="mt-4 max-w-2xl font-serif text-4xl md:text-5xl">Designed to protect before damage begins.</h2>
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
+              <div className="rounded-[2rem] bg-[#f5f0e8] p-8">
+                <h3 className="font-serif text-2xl">Ectoin</h3>
+                <p className="mt-4 text-sm leading-7 text-[#6b5744]">Helps shield skin cells from environmental stress and supports resilience in delicate, frequently exposed skin.</p>
+              </div>
+              <div className="rounded-[2rem] bg-[#f5f0e8] p-8">
+                <h3 className="font-serif text-2xl">Antioxidant Defense</h3>
+                <p className="mt-4 text-sm leading-7 text-[#6b5744]">Supports skin against oxidative stress associated with chlorine and other external stressors.</p>
+              </div>
+              <div className="rounded-[2rem] bg-[#f5f0e8] p-8">
+                <h3 className="font-serif text-2xl">Barrier Support</h3>
+                <p className="mt-4 text-sm leading-7 text-[#6b5744]">Helps preserve comfort, hydration, and softness before and after water exposure.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="story" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+          <div className="grid gap-12 md:grid-cols-2">
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-[#9c8672]">The philosophy</p>
+              <h2 className="mt-4 font-serif text-4xl md:text-5xl">Where nature meets skin science.</h2>
+            </div>
+            <div>
+              <p className="text-base leading-8 text-[#6b5744]">
+                NOLÉA was created for modern families who live in motion—between swim practice, the sea, the sun, and everyday exposure. Every formula is guided by a simple idea: protect the skin barrier first.
+              </p>
+              <p className="mt-6 text-base leading-8 text-[#6b5744]">
+                Rooted in thoughtful ingredients, elevated design, and a pediatric-informed perspective, NOLÉA brings a quieter, more intelligent kind of care to children's skincare.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="join" className="bg-[#2c2416] text-[#f5f0e8]">
+          <div className="mx-auto max-w-4xl px-6 py-20 text-center md:px-10">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#9c8672]">Coming soon</p>
+            <h2 className="mt-4 font-serif text-4xl md:text-6xl">Join NOLÉA.</h2>
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-[#c8b89a]">
+              Be first to experience Aqua Veil™ and receive early access to launch, sampling updates, and the world of barrier-first skincare for water-exposed skin.
+            </p>
+            <form className="mx-auto mt-10 flex max-w-xl flex-col gap-4 sm:flex-row">
+              <input type="email" placeholder="Email address" className="h-14 flex-1 rounded-full border border-[#6b5744] bg-[#3d3020]/40 px-6 text-sm text-[#f5f0e8] placeholder:text-[#9c8672] outline-none" />
+              <button type="submit" className="h-14 rounded-full bg-[#f5f0e8] px-8 text-sm text-[#2c2416] transition hover:bg-[#c8b89a]">
+                Request Early Access
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
