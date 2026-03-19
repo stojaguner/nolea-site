@@ -152,7 +152,7 @@ export default function NoleaSite() {
           id="story"
           className="relative py-32 px-6"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1484820540004-14229fe36ca4?w=1800&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1800&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
