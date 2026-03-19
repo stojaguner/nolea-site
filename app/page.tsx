@@ -32,27 +32,37 @@ export default function NoleaSite() {
 
       <main>
 
-        {/* Hero */}
-        <section className="mx-auto max-w-6xl px-6 py-28 md:px-12 md:py-40 text-center">
-          <p className="mb-8 text-xs uppercase tracking-[0.3em] text-[#999]">Barrier-first skincare for water-exposed skin</p>
-          <h1 className="font-serif text-5xl leading-[1.1] md:text-7xl lg:text-8xl max-w-4xl mx-auto">
-            Protect the skin<br/>
-            <span className="italic font-normal">before damage begins.</span>
-          </h1>
-          <p className="mx-auto mt-10 max-w-lg text-sm leading-9 text-[#666]">
-            Aqua Veil™ is a pre + post swim barrier mist designed to shield delicate skin from chlorine, saltwater, and environmental stressors. Enriched with extremolytes, algae, and sea minerals.
-          </p>
-          <div className="mt-12 flex flex-wrap gap-4 justify-center">
-            <a href="#join" className="bg-[#1c1c1a] text-[#f8f6f1] px-10 py-4 text-xs tracking-[0.2em] uppercase transition hover:bg-[#3a3a36]">
-              Join the Waitlist
-            </a>
-            <a href="#product" className="border border-[#c8b89a] px-10 py-4 text-xs tracking-[0.2em] uppercase text-[#666] transition hover:border-[#1c1c1a] hover:text-[#1c1c1a]">
-              Explore
-            </a>
+        {/* Hero - full screen with water background */}
+        <section
+          className="relative flex min-h-screen items-center justify-center text-center px-6"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1800&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-[#f8f6f1]/60" />
+          <div className="relative z-10 max-w-4xl mx-auto">
+            <p className="mb-8 text-xs uppercase tracking-[0.3em] text-[#6b5744]">Barrier-first skincare for water-exposed skin</p>
+            <h1 className="font-serif text-5xl leading-[1.1] md:text-7xl lg:text-8xl">
+              Protect the skin<br/>
+              <span className="italic font-normal">before damage begins.</span>
+            </h1>
+            <p className="mx-auto mt-10 max-w-lg text-sm leading-9 text-[#555]">
+              Aqua Veil™ is a pre + post swim barrier mist designed to shield delicate skin from chlorine, saltwater, and environmental stressors. Enriched with extremolytes, algae, and sea minerals.
+            </p>
+            <div className="mt-12 flex flex-wrap gap-4 justify-center">
+              <a href="#join" className="bg-[#1c1c1a] text-[#f8f6f1] px-10 py-4 text-xs tracking-[0.2em] uppercase transition hover:bg-[#3a3a36]">
+                Join the Waitlist
+              </a>
+              <a href="#product" className="border border-[#1c1c1a] px-10 py-4 text-xs tracking-[0.2em] uppercase text-[#1c1c1a] transition hover:bg-[#1c1c1a] hover:text-[#f8f6f1]">
+                Explore
+              </a>
+            </div>
           </div>
         </section>
 
-        {/* Full width divider with tagline */}
+        {/* Tagline strip */}
         <section className="border-t border-b border-[#e0ddd6] bg-[#f0ece3] py-16 text-center">
           <p className="font-serif text-2xl italic text-[#6b5744] md:text-3xl">
             "Each application is an act of protection."
@@ -60,44 +70,47 @@ export default function NoleaSite() {
           <p className="mt-4 text-xs uppercase tracking-[0.2em] text-[#999]">Fragrance-free · Sensitive skin · Pediatric-informed</p>
         </section>
 
-        {/* Product */}
-        <section id="product" className="mx-auto max-w-6xl px-6 py-28 md:px-12">
-          <div className="grid gap-20 md:grid-cols-2 md:items-center">
-            <div className="flex items-center justify-center bg-[#ede8df] min-h-[500px]">
-              <div className="relative h-[380px] w-[160px] border border-[#d5cec4] bg-[#f8f6f1]">
-                <div className="mx-auto mt-6 h-[2px] w-12 bg-[#c8b89a]" />
-                <div className="px-5 pt-14 text-center">
-                  <div className="font-serif text-xl tracking-[0.2em]">NOLÉA</div>
-                  <div className="mt-3 font-serif text-base italic text-[#6b5744]">Aqua Veil™</div>
-                  <div className="mt-2 text-xs uppercase tracking-[0.15em] text-[#999]">Barrier Shield Mist</div>
-                  <div className="mt-1 text-xs text-[#bbb]">100 ml</div>
-                  <div className="mt-14 text-xs leading-6 text-[#bbb]">Ectoin<br/>Antioxidant<br/>Barrier</div>
-                </div>
+        {/* Product - image left, text right */}
+        <section id="product">
+          <div className="grid md:grid-cols-2">
+            <div
+              className="relative min-h-[500px] md:min-h-[640px]"
+              style={{
+                backgroundImage: 'url(https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=900&q=80)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              <div className="absolute inset-0 bg-[#1c1c1a]/20" />
+              <div className="absolute bottom-8 left-8">
+                <p className="text-xs uppercase tracking-[0.2em] text-white/80">Aqua Veil™ — 100ml</p>
               </div>
             </div>
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-[#999]">The debut formula</p>
-              <h2 className="mt-5 font-serif text-4xl md:text-5xl">Aqua Veil™</h2>
-              <div className="mt-6 h-px w-10 bg-[#c8b89a]" />
-              <p className="mt-8 text-sm leading-9 text-[#555]">
-                A lightweight, fast-drying mist formulated to support the skin barrier before and after exposure to water, chlorine, salt, and sun. Made to disappear instantly on skin while leaving behind comfort, calm, and resilience.
-              </p>
-              <p className="mt-6 text-sm leading-9 text-[#555]">
-                Made for young swimmers, water sport kids, and families who live between the pool, the sea, and the sun.
-              </p>
-              <div className="mt-10 grid gap-6 sm:grid-cols-2 text-sm">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-[#999] mb-3">Before swim</p>
-                  <p className="text-[#555] leading-7">Mist onto clean skin for barrier support before entering the water.</p>
+            <div className="flex items-center bg-[#f8f6f1] px-10 py-16 md:px-14">
+              <div>
+                <p className="text-xs uppercase tracking-[0.3em] text-[#999]">The debut formula</p>
+                <h2 className="mt-5 font-serif text-4xl md:text-5xl">Aqua Veil™</h2>
+                <div className="mt-6 h-px w-10 bg-[#c8b89a]" />
+                <p className="mt-8 text-sm leading-9 text-[#555]">
+                  A lightweight, fast-drying mist formulated to support the skin barrier before and after exposure to water, chlorine, salt, and sun. Made to disappear instantly on skin while leaving behind comfort, calm, and resilience.
+                </p>
+                <p className="mt-6 text-sm leading-9 text-[#555]">
+                  Made for young swimmers, water sport kids, and families who live between the pool, the sea, and the sun.
+                </p>
+                <div className="mt-10 grid gap-6 sm:grid-cols-2 text-sm">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-[#999] mb-3">Before swim</p>
+                    <p className="text-[#555] leading-7">Mist onto clean skin for barrier support before entering the water.</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-[#999] mb-3">After swim</p>
+                    <p className="text-[#555] leading-7">Reapply after towel drying to restore calm and comfort to exposed skin.</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-[#999] mb-3">After swim</p>
-                  <p className="text-[#555] leading-7">Reapply after towel drying to restore calm and comfort to exposed skin.</p>
-                </div>
+                <a href="#join" className="mt-10 inline-block border-b border-[#1c1c1a] pb-px text-xs uppercase tracking-[0.2em] hover:text-[#666] hover:border-[#666] transition">
+                  Join the waitlist
+                </a>
               </div>
-              <a href="#join" className="mt-10 inline-block border-b border-[#1c1c1a] pb-px text-xs uppercase tracking-[0.2em] hover:text-[#666] hover:border-[#666] transition">
-                Join the waitlist
-              </a>
             </div>
           </div>
         </section>
@@ -134,9 +147,18 @@ export default function NoleaSite() {
           </div>
         </section>
 
-        {/* Story */}
-        <section id="story" className="mx-auto max-w-6xl px-6 py-28 md:px-12">
-          <div className="grid gap-16 md:grid-cols-2">
+        {/* Story - image background */}
+        <section
+          id="story"
+          className="relative py-32 px-6"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1484820540004-14229fe36ca4?w=1800&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-[#f8f6f1]/75" />
+          <div className="relative z-10 mx-auto max-w-6xl grid gap-16 md:grid-cols-2">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-[#999]">The philosophy</p>
               <h2 className="mt-5 font-serif text-4xl md:text-5xl">We don't treat skin.<br/><span className="italic font-normal">We protect it.</span></h2>
@@ -156,12 +178,22 @@ export default function NoleaSite() {
           </div>
         </section>
 
-        {/* Full width quote */}
-        <section className="border-t border-b border-[#e0ddd6] bg-[#1c1c1a] py-24 text-center text-[#f8f6f1]">
-          <p className="font-serif text-3xl italic md:text-4xl max-w-3xl mx-auto px-6 leading-[1.4]">
-            "Barrier-first. Always."
-          </p>
-          <p className="mt-6 text-xs uppercase tracking-[0.3em] text-[#666]">NOLÉA — Aqua Veil™</p>
+        {/* Full width quote with dark water background */}
+        <section
+          className="relative border-t border-b border-[#e0ddd6] py-32 text-center"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1530053969600-caed2596d242?w=1800&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-[#1c1c1a]/70" />
+          <div className="relative z-10 px-6">
+            <p className="font-serif text-3xl italic text-white md:text-5xl max-w-3xl mx-auto leading-[1.4]">
+              "Barrier-first. Always."
+            </p>
+            <p className="mt-6 text-xs uppercase tracking-[0.3em] text-white/50">NOLÉA — Aqua Veil™</p>
+          </div>
         </section>
 
         {/* Join */}
