@@ -244,7 +244,8 @@ export default function NoleaSite() {
               </div>
             </div>
             <div className="mt-12 border-t border-[#e0ddd6] pt-8 flex flex-wrap justify-between gap-4 text-xs text-[#bbb]">
-              <p>© 2026 NOLÉA. All rights reserved.</p>
+              
+              <p>© 2026 NOLÉA. All rights reserved. · <a href="mailto:hello@nolea.skin" className="hover:text-[#666] transition">hello@nolea.skin</a></p>
               <div className="flex gap-6">
                 <a href="#" className="hover:text-[#666] transition">Privacy Policy</a>
                 <a href="#" className="hover:text-[#666] transition">Terms of Service</a>
