@@ -32,7 +32,7 @@ export default function NoleaSite() {
 
       <main>
 
-        {/* Hero - full screen with water background */}
+        {/* Hero */}
         <section
           className="relative flex min-h-screen items-center justify-center text-center px-6"
           style={{
@@ -70,7 +70,7 @@ export default function NoleaSite() {
           <p className="mt-4 text-xs uppercase tracking-[0.2em] text-[#999]">Fragrance-free · Sensitive skin · Pediatric-informed</p>
         </section>
 
-        {/* Product - image left, text right */}
+        {/* Product */}
         <section id="product">
           <div className="grid md:grid-cols-2">
             <div
@@ -147,7 +147,7 @@ export default function NoleaSite() {
           </div>
         </section>
 
-        {/* Story - image background */}
+        {/* Story */}
         <section
           id="story"
           className="relative py-32 px-6"
@@ -178,7 +178,7 @@ export default function NoleaSite() {
           </div>
         </section>
 
-        {/* Full width quote with dark water background */}
+        {/* Full width quote */}
         <section
           className="relative border-t border-b border-[#e0ddd6] py-32 text-center"
           style={{
@@ -214,7 +214,7 @@ export default function NoleaSite() {
         {/* Footer */}
         <footer className="border-t border-[#e0ddd6] bg-[#f0ece3]">
           <div className="mx-auto max-w-6xl px-6 py-12 md:px-12">
-            <div className="grid gap-10 md:grid-cols-3">
+            <div className="grid gap-10 md:grid-cols-4">
               <div>
                 <svg width="100" height="24" viewBox="0 0 260 50" xmlns="http://www.w3.org/2000/svg">
                   <text x="0" y="38" fontFamily="Georgia, serif" fontSize="36" letterSpacing="0" fill="#1c1c1a">N</text>
@@ -236,6 +236,12 @@ export default function NoleaSite() {
                 </div>
               </div>
               <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#999] mb-4">Contact</p>
+                <a href="mailto:hello@nolea.skin" className="text-xs text-[#555] hover:text-[#1c1c1a] transition border-b border-[#c8b89a] pb-px">
+                  hello@nolea.skin
+                </a>
+              </div>
+              <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-[#999] mb-4">Stay in the know</p>
                 <p className="text-xs leading-7 text-[#555] mb-4">One email per month. Early access, launch updates, no spam.</p>
                 <a href="#join" className="text-xs uppercase tracking-[0.2em] border-b border-[#1c1c1a] pb-px hover:text-[#666] hover:border-[#666] transition">
@@ -244,7 +250,6 @@ export default function NoleaSite() {
               </div>
             </div>
             <div className="mt-12 border-t border-[#e0ddd6] pt-8 flex flex-wrap justify-between gap-4 text-xs text-[#bbb]">
-              
               <p>© 2026 NOLÉA. All rights reserved. · <a href="mailto:hello@nolea.skin" className="hover:text-[#666] transition">hello@nolea.skin</a></p>
               <div className="flex gap-6">
                 <a href="#" className="hover:text-[#666] transition">Privacy Policy</a>
