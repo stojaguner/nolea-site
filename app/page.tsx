@@ -11,7 +11,7 @@ export default function NoleaSite() {
       <header className="sticky top-0 z-30 border-b border-[#e0ddd6] bg-[#f8f6f1]/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-12">
           <svg width="130" height="30" viewBox="0 0 260 50" xmlns="http://www.w3.org/2000/svg">
-            <text x="0" y="38" fontFamily="Georgia, serif" fontSize="36" letterSpacing="0" fill="#1c1c1a">N</text>
+            <text x="40" y="38" fontFamily="Georgia, serif" fontSize="36" letterSpacing="0" fill="#1c1c1a" textAnchor="end">N</text>
             <ellipse cx="61" cy="23" rx="17" ry="20" fill="#f8f6f1" stroke="#1c1c1a" strokeWidth="1.8"/>
             <path d="M46 19 Q53 13 61 19 Q69 25 76 19" fill="none" stroke="#9c8672" strokeWidth="1.1" clipPath="url(#b1)"/>
             <path d="M46 28 Q53 22 61 28 Q69 34 76 28" fill="none" stroke="#c8b89a" strokeWidth="0.8" clipPath="url(#b1)"/>
