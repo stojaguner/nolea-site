@@ -1,20 +1,37 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
+  variable: "--font-serif",
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "NOLÉA — Barrier-first skincare",
-  description: "Aqua Veil™ is a pre + post swim barrier shield mist designed to protect delicate skin from chlorine, saltwater, sun, and environmental stressors.",
+  title: "NOLEA — Aqua Veil",
+  description:
+    "Refined swim skincare for skin under constant exposure. Aqua Veil is a protective mist designed to support the skin barrier before and after chlorine and environmental stress.",
+  keywords: [
+    "Nolea",
+    "Aqua Veil",
+    "swim skincare",
+    "chlorine protective mist",
+    "ectoin skincare",
+    "sensitive skin",
+  ],
+  openGraph: {
+    title: "NOLEA — Aqua Veil",
+    description:
+      "Refined swim skincare for skin under constant exposure.",
+    url: "https://nolea.skin",
+    siteName: "NOLEA",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -24,10 +41,42 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${cormorant.variable}`}>
         {children}
+        <style>{`
+          :root {
+            --font-sans: ${inter.style.fontFamily};
+            --font-serif: ${cormorant.style.fontFamily};
+            --bg: #f7f8f6;
+            --text: #1d2628;
+          }
+
+          * {
+            box-sizing: border-box;
+          }
+
+          html, body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+          }
+
+          body {
+            font-family: var(--font-sans), sans-serif;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+          }
+
+          h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif), serif;
+          }
+
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+        `}</style>
       </body>
     </html>
   );
