@@ -1,62 +1,44 @@
 export default function Home() {
   return (
-    <main style={{
-      fontFamily: "Helvetica Neue, Arial, sans-serif",
-      background: "#F7F9F8",
-      color: "#1F2A2E"
-    }}>
+    <main style={{fontFamily: "sans-serif", padding: "40px", maxWidth: "800px", margin: "auto"}}>
+      
+      <h1 style={{fontSize: "42px", letterSpacing: "4px"}}>NOLEA</h1>
+      
+      <h2 style={{marginTop: "20px"}}>Protection for skin under stress.</h2>
+      
+      <p style={{marginTop: "10px"}}>
+        Chlorine. Sun. Daily exposure. A new layer of defense.
+      </p>
 
-      {/* HERO */}
-      <section style={{
-        height: "90vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-        padding: "40px"
+      <button style={{
+        marginTop: "20px",
+        padding: "12px 24px",
+        background: "#DCEFF2",
+        border: "none",
+        cursor: "pointer"
       }}>
-        <h1 style={{letterSpacing: "10px", fontSize: "48px"}}>NOLEA</h1>
-        <h2 style={{marginTop: "20px", fontWeight: "400"}}>
-          Protection for skin under constant exposure.
-        </h2>
-        <p style={{marginTop: "10px", opacity: 0.7}}>
-          Chlorine. Sun. Repetition.
-        </p>
+        Shop Aqua Veil
+      </button>
 
-        <button style={{
-          marginTop: "30px",
-          padding: "14px 28px",
-          background: "#DCEFF2",
-          border: "none",
-          cursor: "pointer"
-        }}>
-          Shop Aqua Veil
-        </button>
-      </section>
-
-      {/* PRODUCT */}
-      <section style={{padding: "80px 20px", textAlign: "center"}}>
-        <h2>Aqua Veil Protective Mist</h2>
-        <p style={{maxWidth: "500px", margin: "20px auto", opacity: 0.8}}>
-          A lightweight mist designed for pre and post swim use,
-          helping support the skin barrier under environmental stress.
+      <section style={{marginTop: "60px"}}>
+        <h3>Why Nolea</h3>
+        <p>
+          Swimming shouldn’t come at the cost of skin health. 
+          Nolea is designed to support the skin barrier before and after exposure to chlorine and environmental stress.
         </p>
       </section>
 
-      {/* SCIENCE */}
-      <section style={{padding: "80px 20px", textAlign: "center"}}>
+      <section style={{marginTop: "40px"}}>
         <h3>Powered by Ectoin</h3>
-        <p style={{maxWidth: "500px", margin: "20px auto", opacity: 0.8}}>
-          A molecule known to help protect and stabilize skin in extreme environments.
+        <p>
+          A powerful molecule known to support skin resilience under environmental stress.
         </p>
       </section>
 
-      {/* RITUAL */}
-      <section style={{padding: "80px 20px", textAlign: "center"}}>
-        <h3>Ritual</h3>
-        <p><strong>Before swim</strong> — Apply to dry skin</p>
-        <p><strong>After swim</strong> — Reapply after rinsing</p>
+      <section style={{marginTop: "40px"}}>
+        <h3>How to Use</h3>
+        <p><strong>Before swim:</strong> Apply to dry skin</p>
+        <p><strong>After swim:</strong> Reapply after rinsing</p>
       </section>
 
     </main>
