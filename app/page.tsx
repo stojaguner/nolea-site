@@ -29,7 +29,7 @@ export default function Page() {
   ];
 
   return (
-    <main className="min-h-screen bg-stone-50 text-stone-900">
+    <main className="min-h-screen bg-stone-50 text-stone-900 antialiased selection:bg-stone-900 selection:text-stone-50">
       <section className="relative overflow-hidden border-b border-stone-200 bg-gradient-to-b from-stone-50 via-stone-100 to-emerald-50/40">
         <div className="absolute inset-0 opacity-40">
           <div className="absolute -top-32 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-stone-200 blur-3xl" />
@@ -39,6 +39,17 @@ export default function Page() {
 
         <div className="relative mx-auto max-w-7xl px-6 py-10 md:px-10 lg:px-16">
           <header className="mb-14 flex items-center justify-between">
+            <style jsx global>{`
+              html { scroll-behavior: smooth; }
+              body {
+                font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                letter-spacing: -0.01em;
+                background: #f8f6f2;
+              }
+              h1, h2, h3, h4 {
+                letter-spacing: -0.035em;
+              }
+            `}</style>
             <Logo />
             <nav className="hidden gap-8 text-sm tracking-[0.18em] text-stone-600 md:flex uppercase">
               <a href="#formula" className="transition hover:text-stone-900">Formula</a>
@@ -50,28 +61,29 @@ export default function Page() {
           <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="max-w-2xl">
               <p className="mb-5 text-xs uppercase tracking-[0.35em] text-stone-500">
-                Pediatric-informed swim skin care
+                NOLÉA / Aqua Veil™
               </p>
-              <h1 className="max-w-xl text-5xl font-light leading-[1.02] tracking-[-0.04em] text-stone-900 md:text-7xl">
-                Protection, before the damage begins.
+              <h1 className="max-w-xl text-5xl font-extralight leading-[0.98] tracking-[-0.055em] text-stone-900 md:text-7xl">
+                Protection, before exposure.
+              <span className="block text-stone-500">Care, after.</span>
               </h1>
-              <p className="mt-7 max-w-xl text-base leading-8 text-stone-600 md:text-lg">
+              <p className="mt-7 max-w-xl text-[17px] leading-8 text-stone-600 md:text-[19px]">
                 Aqua Veil™ is a barrier-first mist designed to protect delicate skin before and after exposure to chlorine, saltwater, and sun.
-                Quietly scientific. Comfort-first. Created for children who live in the water.
+                A refined approach to swim-exposed skin. Quietly scientific, emotionally calm, and designed for children who live in the water.
               </p>
 
               <div className="mt-9 flex flex-wrap gap-3">
                 <a
                   href="#formula"
-                  className="rounded-full border border-stone-900 bg-stone-900 px-6 py-3 text-sm uppercase tracking-[0.18em] text-stone-50 transition hover:opacity-90"
+                  className="rounded-full border border-stone-900 bg-stone-900 px-6 py-3 text-sm uppercase tracking-[0.18em] text-stone-50 transition duration-300 hover:-translate-y-0.5 hover:opacity-90"
                 >
-                  Discover the formula
+                  Explore the formula
                 </a>
                 <a
                   href="#science"
-                  className="rounded-full border border-stone-300 px-6 py-3 text-sm uppercase tracking-[0.18em] text-stone-700 transition hover:border-stone-500 hover:text-stone-900"
+                  className="rounded-full border border-stone-300 px-6 py-3 text-sm uppercase tracking-[0.18em] text-stone-700 transition duration-300 hover:-translate-y-0.5 hover:border-stone-500 hover:text-stone-900"
                 >
-                  Why it matters
+                  The science
                 </a>
               </div>
             </div>
@@ -120,7 +132,7 @@ export default function Page() {
           {ingredients.map((item) => (
             <div
               key={item.name}
-              className="rounded-[2rem] border border-stone-200 bg-white/80 p-8 shadow-[0_10px_50px_rgba(0,0,0,0.03)] backdrop-blur"
+              className="rounded-[2rem] border border-stone-200 bg-white/80 p-8 shadow-[0_10px_50px_rgba(0,0,0,0.03)] backdrop-blur transition duration-500 hover:-translate-y-1 hover:shadow-[0_18px_60px_rgba(0,0,0,0.06)]"
             >
               <div className="mb-6 h-px w-12 bg-stone-300" />
               <h3 className="text-2xl font-light tracking-[-0.02em] text-stone-900">{item.name}</h3>
@@ -180,7 +192,7 @@ export default function Page() {
             {benefits.map((benefit) => (
               <div
                 key={benefit}
-                className="rounded-[1.75rem] border border-stone-200 bg-stone-50 p-6 text-stone-700 shadow-[0_6px_30px_rgba(0,0,0,0.03)]"
+                className="rounded-[1.75rem] border border-stone-200 bg-stone-50 p-6 text-stone-700 shadow-[0_6px_30px_rgba(0,0,0,0.03)] transition duration-500 hover:-translate-y-1 hover:bg-white"
               >
                 <p className="text-base leading-7">{benefit}</p>
               </div>
@@ -241,7 +253,7 @@ function PhotoCard({
 }) {
   return (
     <div
-      className={`group relative overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-100 shadow-[0_12px_50px_rgba(0,0,0,0.06)] ${
+      className={`group relative overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-100 shadow-[0_12px_50px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-1 ${
         tall ? "min-h-[420px]" : "min-h-[220px]"
       }`}
     >
@@ -249,7 +261,7 @@ function PhotoCard({
         src={src}
         alt={alt}
         fill
-        className="object-cover transition duration-700 group-hover:scale-[1.02]"
+        className="object-cover transition duration-1000 group-hover:scale-[1.04]"
         sizes="(max-width: 768px) 100vw, 50vw"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-stone-950/45 via-stone-900/10 to-white/10" />
