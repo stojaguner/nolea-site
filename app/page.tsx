@@ -1405,47 +1405,14 @@ export default function HomePage() {
             </div>
 
             <div className="storyPanel">
-              <div className="list">
-                <div className="listItem">
-                  <h4>Minimal by intention</h4>
-                  <p>
-                    Every surface, sentence, and visual element is designed to
-                    feel light, eloquent, and precise.
-                  </p>
-                </div>
-
-                <div className="listItem">
-                  <h4>Scientific without severity</h4>
-                  <p>
-                    The brand speaks with clarity and credibility, but never at
-                    the expense of warmth.
-                  </p>
-                </div>
-
-                <div className="listItem">
-                  <h4>Luxury in restraint</h4>
-                  <p>
-                    Instead of excess, the site relies on whitespace, texture,
-                    typography, and atmosphere to create emotional depth.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="ctaSection" id="shop">
-        <div className="container">
-          <div className="ctaShell">
-            <div className="ctaGrid">
-              <div className="ctaCopy">
-                <h2>
-                  A more refined way
-                  <br />
-                  to protect skin.
-                </h2>
-
+  <h3>Our philosophy</h3>
+  <p>
+    We believe protection should feel elegant. Nolea is built on the idea
+    that high-performance skincare can be gentle, visually quiet, and deeply
+    considered. Every formula is designed to support skin under stress with a
+    modern, minimal approach rooted in science and sensitivity.
+  </p>
+</div>
                 <p>
                   Nolea introduces swim skincare as a category with its own
                   language: protective, modern, and beautifully measured. Aqua
