@@ -13,17 +13,10 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nolea.skin"),
   title: "NOLEA — Aqua Veil",
   description:
     "Refined swim skincare for skin under constant exposure. Aqua Veil is a protective mist designed to support the skin barrier before and after chlorine and environmental stress.",
-  keywords: [
-    "Nolea",
-    "Aqua Veil",
-    "swim skincare",
-    "chlorine protective mist",
-    "ectoin skincare",
-    "sensitive skin",
-  ],
   openGraph: {
     title: "NOLEA — Aqua Veil",
     description:
@@ -31,6 +24,12 @@ export const metadata: Metadata = {
     url: "https://nolea.skin",
     siteName: "NOLEA",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NOLEA — Aqua Veil",
+    description:
+      "Refined swim skincare for skin under constant exposure.",
   },
 };
 
