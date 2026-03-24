@@ -19,8 +19,13 @@ export default function HomePage() {
           --max: 1240px;
         }
 
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        * {
+          box-sizing: border-box;
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
 
         body {
           margin: 0;
@@ -34,8 +39,15 @@ export default function HomePage() {
           text-rendering: optimizeLegibility;
         }
 
-        a { color: inherit; text-decoration: none; }
-        .page { position: relative; overflow: clip; }
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .page {
+          position: relative;
+          overflow: clip;
+        }
 
         .topGlow {
           position: absolute;
@@ -101,7 +113,9 @@ export default function HomePage() {
           font-size: 0.96rem;
         }
 
-        .navLinks a:hover { color: var(--text); }
+        .navLinks a:hover {
+          color: var(--text);
+        }
 
         .navButton {
           display: inline-flex;
@@ -124,16 +138,20 @@ export default function HomePage() {
           transform: translateY(-1px);
         }
 
-        .hero { padding: 68px 0 42px; }
+        .hero {
+          padding: 68px 0 42px;
+        }
 
         .heroGrid {
           display: grid;
-          grid-template-columns: 1.1fr 0.9fr;
+          grid-template-columns: 1.08fr 0.92fr;
           gap: 34px;
           align-items: stretch;
         }
 
-        .heroText { padding: 34px 4px 24px 0; }
+        .heroText {
+          padding: 34px 4px 24px 0;
+        }
 
         .eyebrow {
           display: inline-flex;
@@ -160,22 +178,22 @@ export default function HomePage() {
         .hero h1 {
           margin: 24px 0 16px;
           font-family: var(--font-serif), serif;
-          font-size: clamp(3.3rem, 7vw, 6.4rem);
+          font-size: clamp(3.3rem, 7vw, 6.3rem);
           line-height: 0.95;
           letter-spacing: -0.05em;
           font-weight: 500;
-          max-width: 11ch;
+          max-width: 10ch;
         }
 
         .hero h1 span {
           display: block;
-          color: rgba(29, 38, 40, 0.78);
+          color: rgba(29, 38, 40, 0.76);
         }
 
         .hero p.lead {
           margin: 0;
           max-width: 40rem;
-          font-size: 1.14rem;
+          font-size: 1.12rem;
           line-height: 1.85;
           color: var(--muted);
         }
@@ -199,7 +217,6 @@ export default function HomePage() {
           justify-content: center;
           font-size: 0.97rem;
           transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
-          will-change: transform;
         }
 
         .ctaPrimary {
@@ -240,7 +257,7 @@ export default function HomePage() {
 
         .metaValue {
           font-size: 1rem;
-          line-height: 1.5;
+          line-height: 1.55;
         }
 
         .heroVisual {
@@ -308,6 +325,34 @@ export default function HomePage() {
           line-height: 1.55;
         }
 
+        .floatCard {
+          position: absolute;
+          background: rgba(255,255,255,0.65);
+          border: 1px solid rgba(29,38,40,0.08);
+          box-shadow: var(--shadow-soft);
+          border-radius: 20px;
+          padding: 16px 16px 14px;
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          max-width: 230px;
+        }
+
+        .floatCard h4 {
+          margin: 0 0 6px;
+          font-size: 0.92rem;
+          font-weight: 600;
+        }
+
+        .floatCard p {
+          margin: 0;
+          color: var(--muted);
+          font-size: 0.86rem;
+          line-height: 1.55;
+        }
+
+        .fc1 { left: 24px; bottom: 40px; }
+        .fc2 { right: 26px; top: 162px; }
+
         .bottleWrap {
           position: absolute;
           inset: auto 0 34px 0;
@@ -349,7 +394,6 @@ export default function HomePage() {
           width: 26px;
           border-radius: 999px;
           background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.04));
-          filter: blur(1px);
           opacity: 0.95;
         }
 
@@ -447,33 +491,33 @@ export default function HomePage() {
           letter-spacing: 0.09em;
         }
 
-        .floatCard {
-          position: absolute;
-          background: rgba(255,255,255,0.65);
-          border: 1px solid rgba(29,38,40,0.08);
-          box-shadow: var(--shadow-soft);
-          border-radius: 20px;
-          padding: 16px 16px 14px;
-          backdrop-filter: blur(14px);
-          -webkit-backdrop-filter: blur(14px);
-          max-width: 230px;
+        .section {
+          padding: 48px 0;
         }
 
-        .floatCard h4 {
-          margin: 0 0 6px;
-          font-size: 0.92rem;
-          font-weight: 600;
+        .sectionHeader {
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          gap: 24px;
+          margin-bottom: 24px;
         }
 
-        .floatCard p {
+        .sectionHeader h2 {
+          margin: 0;
+          font-family: var(--font-serif), serif;
+          font-size: clamp(2.1rem, 4vw, 3.4rem);
+          line-height: 1;
+          letter-spacing: -0.04em;
+          font-weight: 500;
+        }
+
+        .sectionHeader p {
           margin: 0;
           color: var(--muted);
-          font-size: 0.86rem;
-          line-height: 1.55;
+          line-height: 1.8;
+          max-width: 34rem;
         }
-
-        .fc1 { left: 24px; bottom: 40px; }
-        .fc2 { right: 26px; top: 162px; }
 
         .statRow {
           display: grid;
@@ -504,32 +548,6 @@ export default function HomePage() {
           line-height: 1.7;
         }
 
-        .section { padding: 48px 0; }
-
-        .sectionHeader {
-          display: flex;
-          justify-content: space-between;
-          align-items: end;
-          gap: 24px;
-          margin-bottom: 24px;
-        }
-
-        .sectionHeader h2 {
-          margin: 0;
-          font-family: var(--font-serif), serif;
-          font-size: clamp(2.1rem, 4vw, 3.4rem);
-          line-height: 1;
-          letter-spacing: -0.04em;
-          font-weight: 500;
-        }
-
-        .sectionHeader p {
-          margin: 0;
-          color: var(--muted);
-          line-height: 1.8;
-          max-width: 34rem;
-        }
-
         .split {
           display: grid;
           grid-template-columns: 0.95fr 1.05fr;
@@ -546,7 +564,9 @@ export default function HomePage() {
           position: relative;
         }
 
-        .panelPad { padding: 30px; }
+        .panelPad {
+          padding: 30px;
+        }
 
         .visualPanel {
           min-height: 620px;
@@ -590,21 +610,22 @@ export default function HomePage() {
           -webkit-backdrop-filter: blur(12px);
         }
 
-        .formulaCaption h3,
-        .formulaCaption p { margin: 0; }
-
         .formulaCaption h3 {
+          margin: 0 0 8px;
           font-size: 0.96rem;
-          margin-bottom: 8px;
         }
 
         .formulaCaption p {
+          margin: 0;
           color: var(--muted);
           line-height: 1.65;
           font-size: 0.92rem;
         }
 
-        .featureStack { display: grid; gap: 14px; }
+        .featureStack {
+          display: grid;
+          gap: 14px;
+        }
 
         .featureCard {
           padding: 22px;
@@ -721,35 +742,13 @@ export default function HomePage() {
           line-height: 1.75;
         }
 
-        .scienceBand {
-          margin-top: 18px;
-          padding: 24px;
-          border-radius: 24px;
-          background: linear-gradient(180deg, rgba(220,239,242,0.34), rgba(255,255,255,0.46));
-          border: 1px solid rgba(29,38,40,0.06);
-          display: grid;
-          grid-template-columns: 1.2fr 0.8fr;
-          gap: 20px;
-          align-items: center;
-        }
-
-        .scienceBand h3 {
-          margin: 0 0 8px;
-          font-size: 1.15rem;
-        }
-
-        .scienceBand p {
-          margin: 0;
-          color: var(--muted);
-          line-height: 1.75;
-        }
-
         .quote {
           padding: 28px;
           border-radius: 26px;
           background: rgba(255,255,255,0.56);
           border: 1px solid rgba(29,38,40,0.08);
           box-shadow: var(--shadow-soft);
+          margin-top: 18px;
         }
 
         .quote p {
@@ -980,8 +979,7 @@ export default function HomePage() {
           .heroGrid,
           .split,
           .storyGrid,
-          .ctaGrid,
-          .scienceBand {
+          .ctaGrid {
             grid-template-columns: 1fr;
           }
 
@@ -1071,20 +1069,16 @@ export default function HomePage() {
 
       <header className="nav">
         <div className="navInner">
-          <a href="#" className="brand" aria-label="NOLEA home">
-            NOLEA
-          </a>
+          <a href="#" className="brand">NOLEA</a>
 
-          <nav className="navLinks" aria-label="Primary navigation">
+          <nav className="navLinks">
             <a href="#formula">Formula</a>
             <a href="#science">Science</a>
             <a href="#ritual">Ritual</a>
             <a href="#story">Story</a>
           </nav>
 
-          <a href="#shop" className="navButton">
-            Explore Aqua Veil
-          </a>
+          <a href="#shop" className="navButton">Explore Aqua Veil</a>
         </div>
       </header>
 
@@ -1105,38 +1099,28 @@ export default function HomePage() {
 
               <p className="lead">
                 Nolea creates a quieter kind of performance skincare — refined,
-                minimal, and rooted in barrier science. Aqua Veil is a pre- and
-                post-swim protective mist designed to help skin remain resilient
-                through chlorine, repetition, and environmental stress.
+                minimal, and rooted in barrier science. Aqua Veil is a
+                pre- and post-swim protective mist designed to help skin remain
+                resilient through chlorine, repetition, and environmental stress.
               </p>
 
               <div className="heroActions">
-                <a href="#shop" className="ctaPrimary">
-                  Discover Aqua Veil
-                </a>
-                <a href="#science" className="ctaSecondary">
-                  The science behind it
-                </a>
+                <a href="#shop" className="ctaPrimary">Discover Aqua Veil</a>
+                <a href="#science" className="ctaSecondary">The science behind it</a>
               </div>
 
               <div className="heroMeta">
                 <div className="metaCard">
                   <div className="metaLabel">Format</div>
-                  <div className="metaValue">
-                    Ultra-fine, non-aerosol protective mist
-                  </div>
+                  <div className="metaValue">Ultra-fine, non-aerosol protective mist</div>
                 </div>
                 <div className="metaCard">
                   <div className="metaLabel">Hero Molecule</div>
-                  <div className="metaValue">
-                    Ectoin, selected for skin under repeated stress
-                  </div>
+                  <div className="metaValue">Ectoin, selected for skin under repeated stress</div>
                 </div>
                 <div className="metaCard">
                   <div className="metaLabel">Positioning</div>
-                  <div className="metaValue">
-                    Luxurious, sensitive-skin swim care
-                  </div>
+                  <div className="metaValue">Luxurious, sensitive-skin swim care</div>
                 </div>
               </div>
             </div>
@@ -1242,11 +1226,11 @@ export default function HomePage() {
               <div className="formulaOrb orb1" />
               <div className="formulaOrb orb2" />
               <div className="formulaOrb orb3" />
+
               <div className="formulaCaption">
                 <h3>Designed as a protective veil</h3>
                 <p>
-                  The visual language mirrors the product itself: fluid,
-                  breathable, and quietly technical.
+                  Lightweight, breathable, and intentionally elegant in feel.
                 </p>
               </div>
             </div>
@@ -1259,8 +1243,8 @@ export default function HomePage() {
                     <div className="featureIndex">01</div>
                   </div>
                   <p>
-                    A lightweight, elegant mist format intended to sit
-                    beautifully on dry skin before time in chlorinated water.
+                    A lightweight mist intended to sit beautifully on dry skin
+                    before time in chlorinated water.
                   </p>
                 </div>
 
@@ -1270,7 +1254,7 @@ export default function HomePage() {
                     <div className="featureIndex">02</div>
                   </div>
                   <p>
-                    Reapplies easily after rinsing, helping the skin feel calm,
+                    Reapplies easily after rinsing, helping skin feel calm,
                     replenished, and less visibly stressed.
                   </p>
                 </div>
@@ -1302,23 +1286,16 @@ export default function HomePage() {
 
           <div className="ingredientsGrid" id="science">
             <div className="ingredientCard">
-              <div className="ingredientTag">
-                <span />
-                Hero active
-              </div>
+              <div className="ingredientTag"><span />Hero active</div>
               <h3>Ectoin</h3>
               <p>
-                Chosen as the signature molecule for the brand story —
-                associated with skin support under extreme environmental
-                conditions.
+                Chosen as the signature molecule for the brand story and its
+                focus on skin under repeated environmental stress.
               </p>
             </div>
 
             <div className="ingredientCard">
-              <div className="ingredientTag">
-                <span />
-                Support system
-              </div>
+              <div className="ingredientTag"><span />Support system</div>
               <h3>Panthenol</h3>
               <p>
                 Included for a softer, barrier-conscious profile and a skin feel
@@ -1327,42 +1304,22 @@ export default function HomePage() {
             </div>
 
             <div className="ingredientCard">
-              <div className="ingredientTag">
-                <span />
-                Hydration layer
-              </div>
+              <div className="ingredientTag"><span />Hydration layer</div>
               <h3>Trehalose</h3>
               <p>
-                Contributes to the product’s protective, comfort-first
-                sensibility while reinforcing the elegant water-based structure.
+                Contributes to the product’s comfort-first sensibility while
+                reinforcing the elegant water-based structure.
               </p>
             </div>
 
             <div className="ingredientCard">
-              <div className="ingredientTag">
-                <span />
-                Antioxidant angle
-              </div>
+              <div className="ingredientTag"><span />Antioxidant angle</div>
               <h3>Sodium Ascorbate</h3>
               <p>
-                Supports the formula’s narrative around chlorine-associated
+                Supports the formula narrative around chlorine-associated
                 oxidative stress and post-exposure skin comfort.
               </p>
             </div>
-          </div>
-
-          <div className="scienceBand">
-            <div>
-              <h3>Scientific in tone, restrained in expression</h3>
-              <p>
-                Nolea speaks with precision, but never harshness. The website is
-                intentionally minimal so the formula story feels intelligent,
-                credible, and emotionally elegant at the same time.
-              </p>
-            </div>
-            <a href="#story" className="buttonGhost">
-              Read the brand story
-            </a>
           </div>
         </div>
       </section>
@@ -1372,9 +1329,9 @@ export default function HomePage() {
           <div className="sectionHeader">
             <h2>The ritual</h2>
             <p>
-              Not a corrective afterthought, but a refined two-moment practice
-              designed around repetition, exposure, and skin that needs a more
-              thoughtful kind of support.
+              Not an afterthought, but a refined two-moment practice designed
+              around repetition, exposure, and skin that needs a more thoughtful
+              kind of support.
             </p>
           </div>
 
@@ -1413,7 +1370,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="quote" style={{ marginTop: 18 }}>
+          <div className="quote">
             <p>
               “Protection, not interference. Support, not heaviness. A quieter
               response to visible stress.”
@@ -1488,6 +1445,7 @@ export default function HomePage() {
                   <br />
                   to protect skin.
                 </h2>
+
                 <p>
                   Nolea introduces swim skincare as a category with its own
                   language: protective, modern, and beautifully measured. Aqua
@@ -1496,12 +1454,8 @@ export default function HomePage() {
                 </p>
 
                 <div className="ctaButtons">
-                  <a href="#" className="ctaPrimary">
-                    Join the first release
-                  </a>
-                  <a href="#" className="ctaSecondary">
-                    Request formulation deck
-                  </a>
+                  <a href="#" className="ctaPrimary">Join the first release</a>
+                  <a href="#" className="ctaSecondary">Request formulation deck</a>
                 </div>
               </div>
 
