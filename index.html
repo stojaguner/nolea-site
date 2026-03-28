@@ -82,14 +82,36 @@
   <div class="page">
     <header>
       <a href="/" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; align-items:center; gap:8px;">
-        <svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
-          <!-- Head -->
-          <circle cx="26" cy="20" r="5" fill="currentColor" />
-          <!-- Arm / upper body -->
-          <path d="M16 32 C24 24, 34 24, 46 30" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-          <!-- Water waves -->
-          <path d="M10 40 C18 44, 26 44, 34 40 C42 36, 50 36, 58 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-          <path d="M20 46 C28 50, 36 50, 44 46 C52 42, 60 42, 68 46" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+        <svg width="140" height="60" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
+          <!-- Head (left) -->
+          <circle
+            cx="32"
+            cy="24"
+            r="5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+          <!-- Arm above water (soft arc) -->
+          <path
+            d="M24 30
+               C 34 18, 52 16, 68 24
+               C 78 29, 86 34, 94 38"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          />
+          <!-- Water line (soft, low wave) -->
+          <path
+            d="M14 44
+               C 28 48, 42 48, 56 44
+               C 70 40, 84 40, 98 44"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
         </svg>
         <div style="font-family:'Cormorant Garamond', Georgia, serif; font-weight:300; letter-spacing:0.35em; font-size:22px;">
           NOLÉA
