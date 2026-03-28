@@ -81,24 +81,22 @@
 <body>
   <div class="page">
     <header>
-      <a href="/" style="text-decoration:none; color:inherit;">
-        <svg width="500" height="200" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <style>
-              .logo-wordmark { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; letter-spacing: 0.35em; fill: currentColor; }
-              .logo-sub { font-family: sans-serif; font-weight: 400; letter-spacing: 0.25em; font-size: 11px; fill: currentColor; opacity: 0.6; }
-            </style>
-          </defs>
-          <path d="M340 68 C310 88,285 112,285 148 C285 183,308 210,340 220 C372 210,395 183,395 148 C395 112,370 88,340 68Z" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.9"/>
-          <path d="M340 80 C316 98,297 118,297 148 C297 176,315 200,340 209 C365 200,383 176,383 148 C383 118,364 98,340 80Z" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.35"/>
-          <path d="M316 138 Q322 133,328 138 Q334 143,340 138 Q346 133,352 138 Q358 143,364 138" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" opacity="0.9"/>
-          <path d="M316 148 Q322 143,328 148 Q334 153,340 148 Q346 143,352 148 Q358 153,364 148" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" opacity="0.6"/>
-          <path d="M316 158 Q322 153,328 158 Q334 163,340 158 Q346 153,352 158 Q358 163,364 158" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" opacity="0.3"/>
-          <line x1="130" y1="248" x2="210" y2="248" stroke="currentColor" stroke-width="0.6" opacity="0.35"/>
-          <line x1="470" y1="248" x2="550" y2="248" stroke="currentColor" stroke-width="0.6" opacity="0.35"/>
-          <text x="340" y="252" text-anchor="middle" class="logo-wordmark" font-size="38">NOLÉA</text>
-          <text x="340" y="278" text-anchor="middle" class="logo-sub">BARRIER-FIRST SKINCARE</text>
+      <a href="/" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+          <!-- Head -->
+          <circle cx="26" cy="20" r="5" fill="currentColor" />
+          <!-- Arm / upper body -->
+          <path d="M16 32 C24 24, 34 24, 46 30" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+          <!-- Water waves -->
+          <path d="M10 40 C18 44, 26 44, 34 40 C42 36, 50 36, 58 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M20 46 C28 50, 36 50, 44 46 C52 42, 60 42, 68 46" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6" />
         </svg>
+        <div style="font-family:'Cormorant Garamond', Georgia, serif; font-weight:300; letter-spacing:0.35em; font-size:22px;">
+          NOLÉA
+        </div>
+        <div style="font-size:11px; letter-spacing:0.25em; text-transform:uppercase; opacity:0.7;">
+          BARRIER-FIRST SKINCARE
+        </div>
       </a>
       <nav class="nav-links">
         <a href="#aqua-veil">Aqua Veil™</a>
@@ -113,7 +111,9 @@
         <div>
           <div class="eyebrow">Barrier-first skincare</div>
           <h1>Invisible protection. Visible care.</h1>
-          <p class="hero-sub">Aqua Veil™ is a pediatric-informed pre + post swim barrier shield mist that protects children's delicate skin from chlorine, saltwater, sun, and everyday environmental stressors.</p>
+          <p class="hero-sub">
+            Aqua Veil™ is a pediatric-informed pre + post swim barrier shield mist that protects children's delicate skin from chlorine, saltwater, sun, and everyday environmental stressors.
+          </p>
           <div class="hero-cta-row">
             <button class="btn-primary" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'});">Join the waitlist</button>
             <button class="btn-secondary" onclick="document.getElementById('aqua-veil').scrollIntoView({behavior:'smooth'});">Explore Aqua Veil™</button>
@@ -125,12 +125,15 @@
             <div class="pill">Pediatric-informed</div>
           </div>
         </div>
+
         <aside class="hero-card" id="aqua-veil">
           <div class="product-tag">NOLÉA debut formula</div>
           <div class="product-name">Aqua Veil™</div>
           <div class="product-sub">Barrier Shield Mist · 100 ml</div>
           <div class="product-meta">Ectoin · Antioxidant Defense · Barrier Support</div>
-          <p class="card-body">A lightweight, fast-drying mist formulated to support the skin barrier before and after exposure to water, chlorine, salt, and sun. Made to disappear on skin while leaving comfort, calm, and resilience.</p>
+          <p class="card-body">
+            A lightweight, fast-drying mist formulated to support the skin barrier before and after exposure to water, chlorine, salt, and sun. Made to disappear on skin while leaving comfort, calm, and resilience.
+          </p>
           <ul class="product-bullets">
             <li>Pre + post swim ritual</li>
             <li>Chlorine and saltwater support</li>
@@ -147,7 +150,9 @@
       <section>
         <div class="section-heading">How it fits your ritual</div>
         <h2>Protection before, comfort after.</h2>
-        <p class="section-intro">Aqua Veil™ was designed to slip into existing swim and sun routines, protecting the skin barrier before damage begins and restoring a sense of calm after every session.</p>
+        <p class="section-intro">
+          Aqua Veil™ was designed to slip into existing swim and sun routines, protecting the skin barrier before damage begins and restoring a sense of calm after every session.
+        </p>
         <div class="two-col">
           <div>
             <h3 style="font-size:15px; margin-bottom:6px;">When to use</h3>
@@ -184,22 +189,30 @@
       <section id="why-it-works">
         <div class="section-heading">Why it works</div>
         <h2>Designed to protect before damage begins.</h2>
-        <p class="section-intro">Each component of Aqua Veil™ was chosen to help skin stay comfortable in high-exposure environments, from chlorinated pools to sunlit decks and long weekends at the sea.</p>
+        <p class="section-intro">
+          Each component of Aqua Veil™ was chosen to help skin stay comfortable in high-exposure environments, from chlorinated pools to sunlit decks and long weekends at the sea.
+        </p>
         <div class="grid-3">
           <div class="card-soft">
             <div class="card-label">01 · Extremolyte care</div>
             <div class="card-title">Ectoin</div>
-            <div class="card-body">Helps shield skin cells from environmental stress and supports resilience in delicate, frequently exposed skin.</div>
+            <div class="card-body">
+              Helps shield skin cells from environmental stress and supports resilience in delicate, frequently exposed skin.
+            </div>
           </div>
           <div class="card-soft">
             <div class="card-label">02 · Defense</div>
             <div class="card-title">Antioxidant support</div>
-            <div class="card-body">Supports skin against oxidative stress associated with chlorine, sun, and other external stressors that can leave skin feeling tight or uncomfortable.</div>
+            <div class="card-body">
+              Supports skin against oxidative stress associated with chlorine, sun, and other external stressors that can leave skin feeling tight or uncomfortable.
+            </div>
           </div>
           <div class="card-soft">
             <div class="card-label">03 · Barrier-first</div>
             <div class="card-title">Barrier comfort</div>
-            <div class="card-body">Helps preserve comfort, hydration, and softness before and after water exposure, so skin feels less stripped after every session.</div>
+            <div class="card-body">
+              Helps preserve comfort, hydration, and softness before and after water exposure, so skin feels less stripped after every session.
+            </div>
           </div>
         </div>
       </section>
@@ -207,20 +220,28 @@
       <section id="philosophy">
         <div class="section-heading">The philosophy</div>
         <h2>Where nature meets skin science.</h2>
-        <p class="section-intro">NOLÉA was created for modern families who live in motion — between swim practice, the sea, the sun, and everyday exposure. Every formula starts with a simple idea: protect the skin barrier first.</p>
+        <p class="section-intro">
+          NOLÉA was created for modern families who live in motion — between swim practice, the sea, the sun, and everyday exposure. Every formula starts with a simple idea: protect the skin barrier first.
+        </p>
         <div class="two-col">
           <div>
-            <p class="section-intro" style="margin-top:10px;">Rooted in thoughtful ingredients, elevated design, and a pediatric-informed perspective, NOLÉA brings a quieter, more intelligent kind of care to children's skincare and water-exposed skin.</p>
+            <p class="section-intro" style="margin-top:10px;">
+              Rooted in thoughtful ingredients, elevated design, and a pediatric-informed perspective, NOLÉA brings a quieter, more intelligent kind of care to children's skincare and water-exposed skin.
+            </p>
             <div class="future">
               <div class="future-item">
                 <div class="future-label">Future ritual</div>
                 <div class="future-name">Barrier Restore Cream</div>
-                <div class="future-copy">A comforting post-rinse moisturizer to help replenish and seal in hydration after long days in water and sun.</div>
+                <div class="future-copy">
+                  A comforting post-rinse moisturizer to help replenish and seal in hydration after long days in water and sun.
+                </div>
               </div>
               <div class="future-item">
                 <div class="future-label">Future ritual</div>
                 <div class="future-name">Mineral Wash</div>
-                <div class="future-copy">A gentle, barrier-aware cleanser created to lift away chlorine, salt, and impurities without stripping the skin.</div>
+                <div class="future-copy">
+                  A gentle, barrier-aware cleanser created to lift away chlorine, salt, and impurities without stripping the skin.
+                </div>
               </div>
             </div>
           </div>
@@ -228,15 +249,21 @@
             <div class="section-heading" style="margin-bottom:4px;">Questions</div>
             <div class="faq-item">
               <div class="faq-q">Is Aqua Veil™ safe for sensitive kids' skin?</div>
-              <div class="faq-a">Aqua Veil™ is formulated with a pediatric-informed perspective and is fragrance-free, with gentle ingredients selected for delicate, frequently exposed skin.</div>
+              <div class="faq-a">
+                Aqua Veil™ is formulated with a pediatric-informed perspective and is fragrance-free, with gentle ingredients selected for delicate, frequently exposed skin.
+              </div>
             </div>
             <div class="faq-item">
               <div class="faq-q">Can it be used with sunscreen?</div>
-              <div class="faq-a">Yes. Apply Aqua Veil™ first, let it settle, then follow with your usual mineral or daily sunscreen as directed.</div>
+              <div class="faq-a">
+                Yes. Apply Aqua Veil™ first, let it settle, then follow with your usual mineral or daily sunscreen as directed.
+              </div>
             </div>
             <div class="faq-item">
               <div class="faq-q">Does it leave a film or residue?</div>
-              <div class="faq-a">The fine mist is designed to feel weightless on skin, without a greasy film or sticky after-feel.</div>
+              <div class="faq-a">
+                The fine mist is designed to feel weightless on skin, without a greasy film or sticky after-feel.
+              </div>
             </div>
           </div>
         </div>
@@ -245,10 +272,14 @@
       <section id="join">
         <div class="section-heading">Coming soon</div>
         <h2>Join NOLÉA.</h2>
-        <p class="section-intro">Be first to experience Aqua Veil™ and receive early access to launch, sampling updates, and the world of barrier-first skincare for water-exposed skin.</p>
+        <p class="section-intro">
+          Be first to experience Aqua Veil™ and receive early access to launch, sampling updates, and the world of barrier-first skincare for water-exposed skin.
+        </p>
         <div class="waitlist">
           <div style="font-size:13px; font-weight:500; margin-bottom:4px;">Join the waitlist</div>
-          <div style="font-size:12px; color:var(--muted);">Enter your email to be notified when Aqua Veil™ is available. No spam — just launch details and considered updates.</div>
+          <div style="font-size:12px; color:var(--muted);">
+            Enter your email to be notified when Aqua Veil™ is available. No spam — just launch details and considered updates.
+          </div>
           <form class="waitlist-row" action="https://example.com/waitlist" method="post">
             <input class="waitlist-input" type="email" name="email" placeholder="you@example.com" required />
             <button class="btn-primary" type="submit">Get early access</button>
