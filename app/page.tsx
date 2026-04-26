@@ -1,11 +1,11 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f7f3ee] text-[#2f2a25]">
-      
+
       {/* HERO */}
       <section className="px-6 py-24 md:px-16 md:py-32">
         <div className="mx-auto max-w-6xl grid gap-16 md:grid-cols-2 md:items-center">
-          
+
           <div>
             <p className="mb-6 text-xs uppercase tracking-[0.35em] text-[#8a7d6f]">
               NOLEA
@@ -60,7 +60,7 @@ export default function Home() {
       {/* SHIFT */}
       <section className="bg-[#eee7dd] px-6 py-24 md:px-16">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-          
+
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-[#9a8d7f] mb-5">
               A different approach
@@ -177,20 +177,10 @@ export default function Home() {
             NOLEA is developing a science-led mist for children exposed to chlorinated water, frequent training, sun, and friction.
           </p>
 
-          <form className="mt-10 flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-            <input
-              type="email"
-              placeholder="Email address"
-              className="flex-1 min-h-12 px-6 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-[#c8b9aa] outline-none"
-            />
-
-            <button
-              type="submit"
-              className="px-7 py-3 rounded-full bg-white text-[#2f2a25] text-sm hover:bg-[#eee7dd]"
-            >
-              Join the First Release
-            </button>
-          </form>
+          <iframe
+            src="https://forms.zohopublic.com/sgunerno1/form/Noleawaitlist/formperma/be11AmiSllq2ZWto-BdaoAtEaGAxQpEzikTKGPdt3nE"
+            className="mx-auto mt-10 h-[260px] w-full max-w-xl border-none"
+          ></iframe>
 
         </div>
       </section>
