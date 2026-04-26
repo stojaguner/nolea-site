@@ -1,664 +1,235 @@
-"use client";
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>NOLÉA | Invisible protection. Visible care.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Aqua Veil™ is a pediatric-informed pre + post swim barrier shield mist that protects delicate skin from chlorine, saltwater, sun, and environmental stressors." />
-
-  <style>
-    :root {
-      --bg: #f5f3ef;
-      --bg-alt: #ffffff;
-      --text: #111111;
-      --muted: #666666;
-      --accent: #1b4d4a;
-      --accent-soft: #e1ebe9;
-      --pill-bg: #e8e2d8;
-      --border: #ded7cc;
-      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: var(--font-sans);
-      background: var(--bg);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 32px 20px 64px;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 32px;
-    }
-
-    .brand {
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-size: 13px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-    .nav-links a {
-      opacity: 0.7;
-    }
-
-    .nav-links a:hover {
-      opacity: 1;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 32px;
-      align-items: flex-start;
-      margin-bottom: 56px;
-    }
-
-    @media (max-width: 800px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 11px;
-      margin-bottom: 12px;
-      color: var(--muted);
-    }
-
-    h1 {
-      font-size: clamp(32px, 5vw, 40px);
-      line-height: 1.05;
-      margin: 0 0 14px;
-    }
-
-    .hero-sub {
-      font-size: 15px;
-      line-height: 1.6;
-      color: var(--muted);
-      max-width: 460px;
-      margin-bottom: 20px;
-    }
-
-    .hero-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .btn-primary {
-      border-radius: 999px;
-      border: none;
-      padding: 10px 22px;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      background: var(--accent);
-      color: #ffffff;
-      cursor: pointer;
-    }
-
-    .btn-secondary {
-      border-radius: 999px;
-      padding: 9px 20px;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      border: 1px solid var(--border);
-      background: transparent;
-      cursor: pointer;
-    }
-
-    .hero-note {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
-    }
-
-    .pill {
-      border-radius: 999px;
-      padding: 6px 12px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      background: var(--pill-bg);
-      color: #4b4136;
-    }
-
-    .hero-card {
-      background: var(--bg-alt);
-      border-radius: 18px;
-      padding: 20px 18px 18px;
-      border: 1px solid var(--border);
-    }
-
-    .product-tag {
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-
-    .product-name {
-      font-size: 20px;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .product-sub {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    .product-meta {
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .product-bullets {
-      list-style: none;
-      padding: 0;
-      margin: 12px 0 0;
-      font-size: 13px;
-    }
-
-    .product-bullets li {
-      margin-bottom: 4px;
-    }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 10px;
-    }
-
-    .badge {
-      font-size: 11px;
-      padding: 4px 9px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: #faf7f2;
-    }
-
-    section {
-      margin-bottom: 56px;
-    }
-
-    .section-heading {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-
-    h2 {
-      font-size: 22px;
-      margin: 0 0 8px;
-    }
-
-    .section-intro {
-      font-size: 14px;
-      color: var(--muted);
-      max-width: 520px;
-      line-height: 1.7;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 24px;
-    }
-
-    @media (max-width: 800px) {
-      .grid-3 {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .card-soft {
-      background: var(--bg-alt);
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      padding: 16px 15px 14px;
-    }
-
-    .card-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-
-    .card-title {
-      font-size: 15px;
-      margin-bottom: 6px;
-    }
-
-    .card-body {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 32px;
-      align-items: flex-start;
-      margin-top: 24px;
-    }
-
-    @media (max-width: 800px) {
-      .two-col {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .list-muted {
-      list-style: none;
-      padding: 0;
-      margin: 12px 0 0;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .list-muted li {
-      margin-bottom: 6px;
-    }
-
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 10px;
-    }
-
-    .chip {
-      font-size: 11px;
-      border-radius: 999px;
-      padding: 4px 9px;
-      background: var(--accent-soft);
-      color: #23423f;
-    }
-
-    .future {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .future-item {
-      border-radius: 14px;
-      border: 1px dashed var(--border);
-      padding: 10px 12px;
-      background: rgba(255, 255, 255, 0.55);
-      font-size: 12px;
-      max-width: 260px;
-    }
-
-    .future-label {
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 2px;
-    }
-
-    .future-name {
-      font-size: 13px;
-      margin-bottom: 2px;
-    }
-
-    .future-copy {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .faq {
-      margin-top: 26px;
-    }
-
-    .faq-item {
-      border-top: 1px solid var(--border);
-      padding: 10px 0;
-    }
-
-    .faq-q {
-      font-size: 13px;
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-
-    .faq-a {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .waitlist {
-      background: var(--bg-alt);
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      padding: 22px 18px 20px;
-      margin-top: 24px;
-      max-width: 520px;
-    }
-
-    .waitlist-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 12px;
-    }
-
-    .waitlist-input {
-      flex: 1 1 220px;
-      min-width: 0;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      padding: 10px 14px;
-      font-size: 13px;
-      background: #fdfbf7;
-    }
-
-    footer {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-      font-size: 12px;
-      color: var(--muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 12px;
-    }
-  </style>
-</head>
-<body>
-  <div class="page">
-    <header>
-      <div class="brand">NOLÉA</div>
-      <nav class="nav-links">
-        <a href="#aqua-veil">Aqua Veil™</a>
-        <a href="#why-it-works">Science</a>
-        <a href="#philosophy">Philosophy</a>
-        <a href="#join">Join</a>
-      </nav>
-    </header>
-
-    <main>
-      <!-- HERO -->
-      <section class="hero">
-        <div>
-          <div class="eyebrow">Barrier-first skincare</div>
-          <h1>Invisible protection. Visible care.</h1>
-          <p class="hero-sub">
-            Aqua Veil™ is a pediatric-informed pre + post swim barrier shield mist that protects children's delicate skin from chlorine, saltwater, sun, and everyday environmental stressors.
-          </p>
-
-          <div class="hero-cta-row">
-            <button class="btn-primary" onclick="document.getElementById('join').scrollIntoView({behavior: 'smooth'});">
-              Join the waitlist
-            </button>
-            <button class="btn-secondary" onclick="document.getElementById('aqua-veil').scrollIntoView({behavior: 'smooth'});">
-              Explore Aqua Veil™
-            </button>
-          </div>
-          <div class="hero-note">Created for swim parents, water polo families, and water-loving kids.</div>
-
-          <div class="pill-row">
-            <div class="pill">Fragrance-free</div>
-            <div class="pill">Sensitive skin</div>
-            <div class="pill">Pediatric-informed</div>
-          </div>
-        </div>
-
-        <aside class="hero-card" id="aqua-veil">
-          <div class="product-tag">NOLÉA debut formula</div>
-          <div class="product-name">Aqua Veil™</div>
-          <div class="product-sub">Barrier Shield Mist · 100 ml</div>
-          <div class="product-meta">Ectoin · Antioxidant Defense · Barrier Support</div>
-
-          <p class="card-body">
-            A lightweight, fast-drying mist formulated to support the skin barrier before and after exposure to water, chlorine, salt, and sun. Made to disappear on skin while leaving comfort, calm, and resilience.
-          </p>
-
-          <ul class="product-bullets">
-            <li>Pre + post swim ritual</li>
-            <li>Chlorine and saltwater support</li>
-            <li>Made for delicate, frequently exposed skin</li>
-          </ul>
-
-          <div class="badge-row">
-            <div class="badge">Fine, weightless mist</div>
-            <div class="badge">No residue</div>
-            <div class="badge">No fragrance</div>
-          </div>
-        </aside>
-      </section>
-
-      <!-- HOW / WHEN / WHO -->
-      <section>
-        <div class="section-heading">How it fits your ritual</div>
-        <h2>Protection before, comfort after.</h2>
-        <p class="section-intro">
-          Aqua Veil™ was designed to slip into existing swim and sun routines, protecting the skin barrier before damage begins and restoring a sense of calm after every session.
-        </p>
-
-        <div class="two-col">
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-[#f7f3ee] text-[#2f2a25]">
+      {/* HERO */}
+      <section className="px-6 py-24 md:px-16 md:py-32">
+        <div className="mx-auto max-w-6xl grid gap-16 md:grid-cols-2 md:items-center">
           <div>
-            <h3 style="font-size:15px; margin-bottom:6px;">When to use</h3>
-            <ul class="list-muted">
-              <li>Before swim for proactive barrier support.</li>
-              <li>Reapply after towel drying or post-rinse.</li>
-              <li>Use on pool days, beach days, and high-exposure afternoons.</li>
-            </ul>
-
-            <h3 style="font-size:15px; margin:18px 0 6px;">Texture</h3>
-            <ul class="list-muted">
-              <li>Fine, weightless mist that sinks in instantly.</li>
-              <li>No residue, no stickiness, no added fragrance.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 style="font-size:15px; margin-bottom:6px;">How to use</h3>
-            <ul class="list-muted">
-              <li>Mist onto clean, dry skin before swim or water play.</li>
-              <li>Reapply after towel drying or post-rinse as needed.</li>
-              <li>Layer comfortably under mineral sunscreen or daily moisturizer.</li>
-            </ul>
-
-            <h3 style="font-size:15px; margin:18px 0 6px;">Made for</h3>
-            <div class="chip-row">
-              <div class="chip">Children's delicate skin</div>
-              <div class="chip">Swim team &amp; water polo</div>
-              <div class="chip">Frequent swimmers</div>
-              <div class="chip">Pool &amp; beach days</div>
-              <div class="chip">Everyday exposure</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SCIENCE -->
-      <section id="why-it-works">
-        <div class="section-heading">Why it works</div>
-        <h2>Designed to protect before damage begins.</h2>
-        <p class="section-intro">
-          Each component of Aqua Veil™ was chosen to help skin stay comfortable in high-exposure environments, from chlorinated pools to sunlit decks and long weekends at the sea.
-        </p>
-
-        <div class="grid-3">
-          <div class="card-soft">
-            <div class="card-label">01 · Extremolyte care</div>
-            <div class="card-title">Ectoin</div>
-            <div class="card-body">
-              Helps shield skin cells from environmental stress and supports resilience in delicate, frequently exposed skin.
-            </div>
-          </div>
-
-          <div class="card-soft">
-            <div class="card-label">02 · Defense</div>
-            <div class="card-title">Antioxidant support</div>
-            <div class="card-body">
-              Supports skin against oxidative stress associated with chlorine, sun, and other external stressors that can leave skin feeling tight or uncomfortable.
-            </div>
-          </div>
-
-          <div class="card-soft">
-            <div class="card-label">03 · Barrier-first</div>
-            <div class="card-title">Barrier comfort</div>
-            <div class="card-body">
-              Helps preserve comfort, hydration, and softness before and after water exposure, so skin feels less stripped after every session.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PHILOSOPHY + FUTURE -->
-      <section id="philosophy">
-        <div class="section-heading">The philosophy</div>
-        <h2>Where nature meets skin science.</h2>
-        <p class="section-intro">
-          NOLÉA was created for modern families who live in motion — between swim practice, the sea, the sun, and everyday exposure. Every formula starts with a simple idea: protect the skin barrier first.
-        </p>
-
-        <div class="two-col">
-          <div>
-            <p class="section-intro" style="margin-top:10px;">
-              Rooted in thoughtful ingredients, elevated design, and a pediatric-informed perspective, NOLÉA brings a quieter, more intelligent kind of care to children's skincare and water-exposed skin.
+            <p className="mb-6 text-xs uppercase tracking-[0.35em] text-[#8a7d6f]">
+              NOLEA
             </p>
 
-            <div class="future">
-              <div class="future-item">
-                <div class="future-label">Future ritual</div>
-                <div class="future-name">Barrier Restore Cream</div>
-                <div class="future-copy">
-                  A comforting post-rinse moisturizer to help replenish and seal in hydration after long days in water and sun.
-                </div>
-              </div>
+            <h1 className="max-w-2xl text-5xl font-light leading-tight md:text-7xl">
+              Protection, before it’s needed.
+            </h1>
 
-              <div class="future-item">
-                <div class="future-label">Future ritual</div>
-                <div class="future-name">Mineral Wash</div>
-                <div class="future-copy">
-                  A gentle, barrier-aware cleanser created to lift away chlorine, salt, and impurities without stripping the skin.
-                </div>
-              </div>
+            <p className="mt-8 max-w-xl text-lg leading-8 text-[#6d6258]">
+              A refined pre- and post-swim mist designed to support young
+              swimmers’ skin before and after chlorinated water exposure.
+            </p>
+
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#waitlist"
+                className="rounded-full bg-[#2f2a25] px-7 py-3 text-sm text-white transition hover:bg-[#4a423b]"
+              >
+                Join the Waitlist
+              </a>
+
+              <a
+                href="#formula"
+                className="rounded-full border border-[#c8b9aa] px-7 py-3 text-sm text-[#2f2a25] transition hover:bg-[#eee6dc]"
+              >
+                Explore the Formula
+              </a>
             </div>
           </div>
 
-          <div class="faq">
-            <div class="section-heading" style="margin-bottom:4px;">Questions</div>
-            <div class="faq-item">
-              <div class="faq-q">Is Aqua Veil™ safe for sensitive kids' skin?</div>
-              <div class="faq-a">
-                Aqua Veil™ is formulated with a pediatric-informed perspective and is fragrance-free, with gentle ingredients selected for delicate, frequently exposed skin.
-              </div>
+          <div className="min-h-[520px] rounded-[2rem] bg-[#d8d0c4] p-6">
+            <div className="h-full rounded-[1.5rem] bg-gradient-to-br from-[#e9e2d8] to-[#b9c4b2]" />
+          </div>
+        </div>
+      </section>
+
+      {/* PROBLEM */}
+      <section className="border-t border-[#e5ddd3] px-6 py-24 md:px-16">
+        <div className="mx-auto max-w-4xl">
+          <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#9a8d7f]">
+            The overlooked exposure
+          </p>
+
+          <h2 className="text-4xl font-light leading-tight md:text-5xl">
+            Repeated exposure, rarely considered.
+          </h2>
+
+          <p className="mt-8 text-lg leading-8 text-[#6d6258]">
+            For children who spend meaningful time in pools, chlorinated water
+            is not occasional. It is routine. What often presents as dryness,
+            tightness, or sensitivity may reflect a more consistent disruption
+            of the skin barrier under repeated conditions.
+          </p>
+        </div>
+      </section>
+
+      {/* SHIFT */}
+      <section className="bg-[#eee7dd] px-6 py-24 md:px-16">
+        <div className="mx-auto max-w-6xl grid gap-12 md:grid-cols-2">
+          <div>
+            <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#9a8d7f]">
+              A different rhythm
+            </p>
+
+            <h2 className="text-4xl font-light leading-tight md:text-5xl">
+              From reactive to preparatory.
+            </h2>
+          </div>
+
+          <p className="text-lg leading-8 text-[#6d6258]">
+            Most skincare approaches address what happens after exposure.
+            NOLEA is built around a more complete perspective: supporting the
+            skin before and after contact with environmental stressors, not only
+            in response to them.
+          </p>
+        </div>
+      </section>
+
+      {/* FORMULA */}
+      <section id="formula" className="px-6 py-24 md:px-16">
+        <div className="mx-auto max-w-6xl grid gap-16 md:grid-cols-2 md:items-center">
+          <div className="order-2 md:order-1 min-h-[460px] rounded-[2rem] bg-[#d6dcd1] p-6">
+            <div className="h-full rounded-[1.5rem] bg-gradient-to-br from-[#f2eee8] to-[#aebaa8]" />
+          </div>
+
+          <div className="order-1 md:order-2">
+            <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#9a8d7f]">
+              Formula philosophy
+            </p>
+
+            <h2 className="text-4xl font-light leading-tight md:text-5xl">
+              Precision, not excess.
+            </h2>
+
+            <p className="mt-8 text-lg leading-8 text-[#6d6258]">
+              Our formulations draw from ingredients studied for their ability
+              to support skin under stress, including extremolytes such as
+              ectoin and hydroxyectoin.
+            </p>
+
+            <p className="mt-6 text-lg leading-8 text-[#6d6258]">
+              Designed to be lightweight, water-based, and compatible with
+              frequent use, each formula focuses on resilience rather than
+              coverage.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW TO USE */}
+      <section className="border-y border-[#e5ddd3] px-6 py-24 md:px-16">
+        <div className="mx-auto max-w-6xl">
+          <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#9a8d7f]">
+            Daily use
+          </p>
+
+          <h2 className="max-w-3xl text-4xl font-light leading-tight md:text-5xl">
+            Designed for real swimmers, real routines, and repeated exposure.
+          </h2>
+
+          <div className="mt-14 grid gap-8 md:grid-cols-2">
+            <div className="rounded-[1.5rem] bg-white/50 p-8">
+              <h3 className="text-2xl font-light">Before swimming</h3>
+              <p className="mt-5 leading-7 text-[#6d6258]">
+                Applied to clean skin to support barrier function prior to pool
+                exposure.
+              </p>
             </div>
-            <div class="faq-item">
-              <div class="faq-q">Can it be used with sunscreen?</div>
-              <div class="faq-a">
-                Yes. Apply Aqua Veil™ first, let it settle, then follow with your usual mineral or daily sunscreen as directed.
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-q">Does it leave a film or residue?</div>
-              <div class="faq-a">
-                The fine mist is designed to feel weightless on skin, without a greasy film or sticky after-feel.
-              </div>
+
+            <div className="rounded-[1.5rem] bg-white/50 p-8">
+              <h3 className="text-2xl font-light">After swimming</h3>
+              <p className="mt-5 leading-7 text-[#6d6258]">
+                Reapplied after rinsing to help restore hydration and reduce
+                residual environmental stress.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- JOIN -->
-      <section id="join">
-        <div class="section-heading">Coming soon</div>
-        <h2>Join NOLÉA.</h2>
-        <p class="section-intro">
-          Be first to experience Aqua Veil™ and receive early access to launch, sampling updates, and the world of barrier-first skincare for water-exposed skin.
-        </p>
+      {/* FOUNDER */}
+      <section className="px-6 py-24 md:px-16">
+        <div className="mx-auto max-w-6xl grid gap-16 md:grid-cols-2 md:items-center">
+          <div>
+            <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#9a8d7f]">
+              Founder
+            </p>
 
-        <div class="waitlist">
-          <div style="font-size:13px; font-weight:500; margin-bottom:4px;">Join the waitlist</div>
-          <div style="font-size:12px; color:var(--muted);">
-            Enter your email to be notified when Aqua Veil™ is available. No spam — just launch details and considered updates.
+            <h2 className="text-4xl font-light leading-tight md:text-5xl">
+              A considered approach.
+            </h2>
+
+            <p className="mt-8 text-lg leading-8 text-[#6d6258]">
+              NOLEA was developed in response to a gap between repeated
+              environmental exposure and how children’s skin is typically
+              supported.
+            </p>
+
+            <p className="mt-6 text-lg leading-8 text-[#6d6258]">
+              Created in collaboration with medical professionals, the brand
+              reflects a restrained, evidence-led approach to everyday skin
+              stressors.
+            </p>
           </div>
-          <form
-            class="waitlist-row"
-            action="https://example.com/waitlist"
-            method="post"
-          >
+
+          <div className="min-h-[460px] rounded-[2rem] bg-[#d8d0c4] p-6">
+            <div className="h-full rounded-[1.5rem] bg-gradient-to-br from-[#eee8df] to-[#c7b8a6]" />
+          </div>
+        </div>
+      </section>
+
+      {/* WAITLIST */}
+      <section
+        id="waitlist"
+        className="bg-[#2f2a25] px-6 py-24 text-white md:px-16"
+      >
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#c8b9aa]">
+            First release
+          </p>
+
+          <h2 className="text-4xl font-light leading-tight md:text-5xl">
+            A calmer way to care for swimmers’ skin.
+          </h2>
+
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-[#d8d0c4]">
+            NOLEA is developing a science-led mist for children exposed to
+            chlorinated water, repeated training, sun, and friction.
+          </p>
+
+          <form className="mx-auto mt-10 flex max-w-xl flex-col gap-4 sm:flex-row">
             <input
-              class="waitlist-input"
               type="email"
-              name="email"
-              placeholder="you@example.com"
-              required
+              placeholder="Email address"
+              className="min-h-12 flex-1 rounded-full border border-white/20 bg-white/10 px-6 text-white placeholder:text-[#c8b9aa] outline-none"
             />
-            <button class="btn-primary" type="submit">
-              Get early access
+
+            <button
+              type="submit"
+              className="rounded-full bg-white px-7 py-3 text-sm text-[#2f2a25] transition hover:bg-[#eee7dd]"
+            >
+              Join the First Release
             </button>
           </form>
         </div>
       </section>
-    </main>
 
-    <footer>
-      <div>Created in Los Angeles for water-loving families.</div>
-      <div class="footer-links">
-        <span>© NOLÉA</span>
-        <a href="mailto:hello@nolea.skin">Email</a>
-        <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-      </div>
-    </footer>
-  </div>
-</body>
-</html>
+      {/* FOOTER */}
+      <footer className="px-6 py-10 md:px-16">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 text-sm text-[#8a7d6f] md:flex-row md:items-center md:justify-between">
+          <p>© {new Date().getFullYear()} NOLEA</p>
+
+          <div className="flex gap-6">
+            <a href="#formula" className="hover:text-[#2f2a25]">
+              Formula
+            </a>
+            <a href="#waitlist" className="hover:text-[#2f2a25]">
+              Waitlist
+            </a>
+            <a href="mailto:hello@nolea.skin" className="hover:text-[#2f2a25]">
+              Contact
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
+}
