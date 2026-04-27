@@ -1,4 +1,11 @@
-export default function HomePage() {
+type HomePageProps = {
+  searchParams?: Promise<{ joined?: string }>;
+};
+
+export default async function HomePage({ searchParams }: HomePageProps) {
+  const params = (await searchParams) ?? {};
+  const joined = params.joined === "true";
+
   return (
     <>
       <a className="skip-link" href="#main-content">
@@ -7,9 +14,9 @@ export default function HomePage() {
 
       <header className="site-header">
         <div className="shell header-inner">
-          <a href="#top" className="brand" aria-label="NOLEA home">
+          <a href="#top" className="brand" aria-label="NOLÉA home">
             <span className="brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 64 64" fill="none" role="img" aria-label="NOLEA logo">
+              <svg viewBox="0 0 64 64" fill="none" role="img" aria-label="NOLÉA logo mark">
                 <path
                   d="M18 45C18 28 29 17 46 17C46 34 35 45 18 45Z"
                   stroke="currentColor"
@@ -23,7 +30,7 @@ export default function HomePage() {
                 />
               </svg>
             </span>
-            <span className="brand-type">NOLEA</span>
+            <span className="brand-type">NOLÉA</span>
           </a>
 
           <nav className="header-nav" aria-label="Primary">
@@ -41,14 +48,15 @@ export default function HomePage() {
           <div className="shell hero-grid">
             <div className="hero-copy">
               <p className="eyebrow">Protective skincare for young swimmers</p>
+
               <h1 id="hero-heading">
                 Protection for skin that lives in the water.
               </h1>
+
               <p className="hero-text">
-                NOLEA is developing a pediatric-informed, barrier-first skincare
-                essential for children with repeated pool exposure — created for
-                real swim routines, with a focus on simplicity, comfort, and
-                everyday use.
+                NOLÉA is developing a barrier-first skincare essential for children
+                with repeated pool and sun exposure — designed for real swim
+                routines, with a focus on comfort, simplicity, and everyday ease.
               </p>
 
               <form className="email-form" action="/api/waitlist" method="post">
@@ -66,9 +74,15 @@ export default function HomePage() {
                 </div>
               </form>
 
+              {joined ? (
+                <p className="form-success" role="status">
+                  Thanks — you&apos;re on the list.
+                </p>
+              ) : null}
+
               <p className="fine-print">
-                Join the waitlist for launch updates and early access. We&apos;ll
-                keep it thoughtful and infrequent.
+                Join the waitlist for launch updates and early access. We&apos;ll keep it
+                thoughtful and infrequent.
               </p>
             </div>
 
@@ -83,10 +97,9 @@ export default function HomePage() {
                 <p className="panel-kicker">Our first category</p>
                 <h2>Care designed around chlorine, sun, salt, and repetition.</h2>
                 <p>
-                  The goal is simple: help support skin comfort before exposure,
-                  help reduce that stripped feeling after, help limit the effects
-                  of chlorinated water on the skin barrier, and make daily care
-                  feel easy for both kids and parents.
+                  The goal is simple: support skin comfort before exposure, reduce
+                  that stripped feeling after, and help make daily care feel easy
+                  for both kids and parents.
                 </p>
               </div>
 
@@ -104,26 +117,36 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section section-intro" id="why" aria-labelledby="why-heading">
+        <section
+          className="section section-intro"
+          id="why"
+          aria-labelledby="why-heading"
+        >
           <div className="shell narrow">
             <p className="section-label">Why this exists</p>
             <h2 id="why-heading">Frequent water exposure asks a lot from skin.</h2>
+
             <div className="prose">
               <p>
-                For many kids, life in the water is routine — swim team, lessons,
-                beach days, long afternoons at the pool. Repeated exposure to
-                chlorinated water, salt, sun, rinsing, and friction can leave
+                For many children, life in the water is routine — swim team,
+                lessons, beach afternoons, long hours at the pool. Repeated
+                exposure to chlorine, salt, sun, rinsing, and friction can leave
                 skin feeling dry, tight, and overworked.
               </p>
               <p>
-                NOLEA is being developed to support the skin barrier around those
-                moments, without turning a child&apos;s routine into a 10-step ritual.
+                NOLÉA is being developed to support the skin barrier around those
+                moments, without turning a child&apos;s routine into something
+                complicated or clinical.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="section section-approach" id="approach" aria-labelledby="approach-heading">
+        <section
+          className="section section-approach"
+          id="approach"
+          aria-labelledby="approach-heading"
+        >
           <div className="shell approach-grid">
             <div className="approach-intro">
               <p className="section-label">Our approach</p>
@@ -137,8 +160,8 @@ export default function HomePage() {
                 <p className="card-tag">01</p>
                 <h3>Barrier-first thinking</h3>
                 <p>
-                  We&apos;re designing around skin comfort and resilience, with a
-                  focus on repeated exposure rather than one-off use.
+                  We&apos;re designing around skin comfort and resilience, with a focus
+                  on repeated exposure rather than one-off use.
                 </p>
               </article>
 
@@ -147,7 +170,7 @@ export default function HomePage() {
                 <h3>Routine-ready design</h3>
                 <p>
                   Before swim, after rinse-off, after sun — the product should fit
-                  into life as it already exists.
+                  naturally into life as it already exists.
                 </p>
               </article>
 
@@ -156,7 +179,7 @@ export default function HomePage() {
                 <h3>Parent-trust language</h3>
                 <p>
                   Calm, clear communication matters. We care about usefulness more
-                  than hype.
+                  than hype, and clarity more than marketing noise.
                 </p>
               </article>
             </div>
@@ -175,9 +198,10 @@ export default function HomePage() {
             <div className="rhythm-copy">
               <p className="section-label">How it fits</p>
               <h2 id="rhythm-heading">Protection before. Comfort after.</h2>
+
               <div className="prose">
                 <p>
-                  NOLEA is being developed to work around the moments families
+                  NOLÉA is being developed to work around the moments families
                   already have: before swim, after rinse-off, after sun, and on
                   high-exposure days when skin needs more support.
                 </p>
@@ -190,12 +214,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section section-standard" aria-labelledby="standard-heading">
+        <section
+          className="section section-standard"
+          aria-labelledby="standard-heading"
+        >
           <div className="shell narrow">
             <p className="section-label">Our standard</p>
             <h2 id="standard-heading">
               Children&apos;s skincare should feel calm, considered, and useful.
             </h2>
+
             <div className="prose">
               <p>
                 We believe skincare for children should be easy to understand,
@@ -208,11 +236,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section section-cta" id="waitlist" aria-labelledby="waitlist-heading">
+        <section
+          className="section section-cta"
+          id="waitlist"
+          aria-labelledby="waitlist-heading"
+        >
           <div className="shell cta-shell">
             <div className="cta-block">
               <p className="section-label">Join the waitlist</p>
-              <h2 id="waitlist-heading">Be first to hear when NOLEA launches.</h2>
+              <h2 id="waitlist-heading">Be first to hear when NOLÉA launches.</h2>
               <p className="cta-text">
                 Sign up for early access, launch updates, and thoughtful notes as
                 the first product takes shape.
@@ -240,7 +272,7 @@ export default function HomePage() {
       <footer className="site-footer">
         <div className="shell footer-inner">
           <p>Barrier-first skincare for young swimmers.</p>
-          <p>NOLEA — prelaunch.</p>
+          <p>NOLÉA — prelaunch.</p>
         </div>
       </footer>
     </>
