@@ -1,278 +1,216 @@
-type HomePageProps = {
-  searchParams?: Promise<{ joined?: string }>;
-};
+import React from 'react';
 
-export default async function HomePage({ searchParams }: HomePageProps) {
-  const params = (await searchParams) ?? {};
-  const joined = params.joined === "true";
-
+export default function Home() {
   return (
     <>
-      <a className="skip-link" href="#main-content">
-        Skip to content
-      </a>
-
-      <header className="site-header">
-        <div className="shell header-inner">
-          <a href="#top" className="brand" aria-label="NOLÉA home">
-            <span className="brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 64 64" fill="none" role="img" aria-label="NOLÉA logo mark">
-                <path
-                  d="M18 45C18 28 29 17 46 17C46 34 35 45 18 45Z"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                />
-                <path
-                  d="M18 45C21 33 29 27 40 24"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
-            <span className="brand-type">NOLÉA</span>
+      <a href="#main" className="skip-link">Skip to content</a>
+      <header className="header">
+        <div className="container header-inner">
+          <a className="brand" href="#top" aria-label="Noléa home">
+            <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="20" cy="24" r="4" stroke="currentColor" strokeWidth="2.4" fill="none"/>
+              <path d="M20 30 Q 32 22, 48 26" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" fill="none"/>
+              <path d="M12 42 Q 32 43, 52 42" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
+            </svg>
+            <span>Noléa</span>
           </a>
-
-          <nav className="header-nav" aria-label="Primary">
+          <nav className="nav" id="nav">
             <a href="#approach">Approach</a>
-            <a href="#why">Why it exists</a>
-            <a href="#waitlist" className="nav-cta">
-              Early access
-            </a>
+            <a href="#formulation">Formulation</a>
+            <a href="#founder">Founder</a>
+            <a href="#waitlist">Waitlist</a>
           </nav>
+          <div className="header-actions">
+            <button className="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open navigation">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            </button>
+            <button className="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <a className="btn btn-secondary" href="#waitlist">Join waitlist</a>
+          </div>
         </div>
       </header>
 
-      <main id="main-content">
-        <section className="hero" id="top" aria-labelledby="hero-heading">
-          <div className="shell hero-grid">
-            <div className="hero-copy">
-              <p className="eyebrow">Protective skincare for young swimmers</p>
-
-              <h1 id="hero-heading">
-                Protection for skin that lives in the water.
-              </h1>
-
-              <p className="hero-text">
-                NOLÉA is developing a barrier-first skincare essential for children
-                with repeated pool and sun exposure — designed for real swim
-                routines, with a focus on comfort, simplicity, and everyday ease.
-              </p>
-
-              <form className="email-form" action="/api/waitlist" method="post">
-                <label htmlFor="hero-email">Email address</label>
-                <div className="email-row">
-                  <input
-                    id="hero-email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    placeholder="you@example.com"
-                    required
-                  />
-                  <button type="submit">Get Early Access</button>
-                </div>
-              </form>
-
-              {joined ? (
-                <p className="form-success" role="status">
-                  Thanks — you&apos;re on the list.
-                </p>
-              ) : null}
-
-              <p className="fine-print">
-                Join the waitlist for launch updates and early access. We&apos;ll keep it
-                thoughtful and infrequent.
-              </p>
+      <main id="main">
+        <section className="hero" id="top">
+          <div className="container hero-grid">
+            <div className="hero-copy reveal visible">
+              <span className="eyebrow">Science-backed pediatric swim-skin care</span>
+              <h1>Protection, before it&apos;s needed.</h1>
+              <p>A refined approach to supporting children&apos;s skin exposed to chlorinated water—designed with restraint, informed by real exposure, and shaped for everyday use.</p>
+              <div className="hero-actions">
+                <a className="btn btn-primary" href="#waitlist">Join the Waitlist</a>
+                <a className="btn btn-secondary" href="#approach">Explore the approach</a>
+              </div>
+              <div className="hero-meta" aria-label="Product focus highlights">
+                <span>Pre-swim support</span>
+                <span>Post-swim recovery</span>
+                <span>Barrier-focused</span>
+              </div>
             </div>
-
-            <aside className="hero-panel" aria-label="Brand overview">
-              <div className="panel-top">
-                <span className="mini-label">Prelaunch</span>
-                <span className="mini-rule" />
-                <span className="mini-label">Barrier-first</span>
+            <div className="hero-visual reveal visible" aria-hidden="true">
+              <div className="swirl"></div>
+              <div className="visual-card two">
+                <small>Focused on</small>
+                <strong>Repeated pool exposure</strong>
+                <p>Support for skin under frequent environmental stress, not occasional treatment alone.</p>
               </div>
-
-              <div className="hero-panel-body">
-                <p className="panel-kicker">Our first category</p>
-                <h2>Care designed around chlorine, sun, salt, and repetition.</h2>
-                <p>
-                  The goal is simple: support skin comfort before exposure, reduce
-                  that stripped feeling after, and help make daily care feel easy
-                  for both kids and parents.
-                </p>
+              <div className="mist-bottle"></div>
+              <div className="visual-card one">
+                <small>Formulation lens</small>
+                <strong>Precision, not excess</strong>
+                <p>Lightweight, water-based, compatible with regular use and active routines.</p>
               </div>
-
-              <div className="panel-list">
-                <div>
-                  <span className="stat-label">Built for</span>
-                  <p>Swim practice, lessons, beach days, pool weekends</p>
-                </div>
-                <div>
-                  <span className="stat-label">Designed for</span>
-                  <p>Simple family routines, not complicated regimens</p>
-                </div>
-              </div>
-            </aside>
-          </div>
-        </section>
-
-        <section
-          className="section section-intro"
-          id="why"
-          aria-labelledby="why-heading"
-        >
-          <div className="shell narrow">
-            <p className="section-label">Why this exists</p>
-            <h2 id="why-heading">Frequent water exposure asks a lot from skin.</h2>
-
-            <div className="prose">
-              <p>
-                For many children, life in the water is routine — swim team,
-                lessons, beach afternoons, long hours at the pool. Repeated
-                exposure to chlorine, salt, sun, rinsing, and friction can leave
-                skin feeling dry, tight, and overworked.
-              </p>
-              <p>
-                NOLÉA is being developed to support the skin barrier around those
-                moments, without turning a child&apos;s routine into something
-                complicated or clinical.
-              </p>
             </div>
           </div>
         </section>
 
-        <section
-          className="section section-approach"
-          id="approach"
-          aria-labelledby="approach-heading"
-        >
-          <div className="shell approach-grid">
-            <div className="approach-intro">
-              <p className="section-label">Our approach</p>
-              <h2 id="approach-heading">
-                Gentle, purposeful, and grounded in real routines.
-              </h2>
+        <section id="approach">
+          <div className="container">
+            <div className="section-head reveal">
+              <div>
+                <span className="eyebrow">The problem</span>
+                <h2>Repeated exposure, rarely considered.</h2>
+              </div>
+              <p>For children who spend meaningful time in pools, chlorinated water is not occasional. It is repeated, cumulative, and often reduced to the language of ordinary dryness.</p>
             </div>
-
-            <div className="approach-cards">
-              <article className="approach-card large">
-                <p className="card-tag">01</p>
-                <h3>Barrier-first thinking</h3>
-                <p>
-                  We&apos;re designing around skin comfort and resilience, with a focus
-                  on repeated exposure rather than one-off use.
-                </p>
+            <div className="problem-grid">
+              <article className="card reveal">
+                <h3>What appears mild is often ongoing.</h3>
+                <p>Dryness, roughness, and heightened sensitivity can reflect a pattern of barrier disruption rather than a single post-swim reaction.</p>
               </article>
-
-              <article className="approach-card">
-                <p className="card-tag">02</p>
-                <h3>Routine-ready design</h3>
-                <p>
-                  Before swim, after rinse-off, after sun — the product should fit
-                  naturally into life as it already exists.
-                </p>
-              </article>
-
-              <article className="approach-card">
-                <p className="card-tag">03</p>
-                <h3>Parent-trust language</h3>
-                <p>
-                  Calm, clear communication matters. We care about usefulness more
-                  than hype, and clarity more than marketing noise.
-                </p>
+              <article className="card reveal">
+                <h3>Support usually starts too late.</h3>
+                <p>Most products are positioned after exposure. Noléa is built around a more complete sequence: before contact, and after it.</p>
               </article>
             </div>
           </div>
         </section>
 
-        <section className="section section-rhythm" aria-labelledby="rhythm-heading">
-          <div className="shell rhythm-grid">
-            <div className="rhythm-quote">
-              <p className="quote-mark">“</p>
-              <p className="quote-text">
-                Better care, built into the rhythm that already exists.
-              </p>
+        <section>
+          <div className="container shift-panel reveal">
+            <div>
+              <div className="shift-kicker">Positioning shift</div>
+              <h2 style={{fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', lineHeight: 1.05, letterSpacing: '-0.03em', maxWidth: '12ch'}}>From reactive to preparatory.</h2>
+              <p style={{marginTop: 'var(--space-5)', color: 'var(--color-text-muted)', maxWidth: '36ch'}}>A more considered approach supports the skin before and after environmental stressors, rather than only responding once disruption has already appeared.</p>
             </div>
-
-            <div className="rhythm-copy">
-              <p className="section-label">How it fits</p>
-              <h2 id="rhythm-heading">Protection before. Comfort after.</h2>
-
-              <div className="prose">
-                <p>
-                  NOLÉA is being developed to work around the moments families
-                  already have: before swim, after rinse-off, after sun, and on
-                  high-exposure days when skin needs more support.
-                </p>
-                <p>
-                  The goal is not more complexity. It&apos;s a calmer, better-fitting
-                  layer of care for children who spend real time in the water.
-                </p>
+            <div className="phase-list">
+              <div className="phase-item">
+                <strong>Before swimming</strong>
+                <span>Support barrier function prior to exposure.</span>
+              </div>
+              <div className="phase-item">
+                <strong>After swimming</strong>
+                <span>Replenish hydration and help the skin settle after contact.</span>
               </div>
             </div>
           </div>
         </section>
 
-        <section
-          className="section section-standard"
-          aria-labelledby="standard-heading"
-        >
-          <div className="shell narrow">
-            <p className="section-label">Our standard</p>
-            <h2 id="standard-heading">
-              Children&apos;s skincare should feel calm, considered, and useful.
-            </h2>
-
-            <div className="prose">
-              <p>
-                We believe skincare for children should be easy to understand,
-                gentle in tone, and purposeful in design. That means a
-                barrier-first philosophy, careful formulation thinking, and a
-                brand that respects both parents and the kids these routines are
-                built around.
-              </p>
+        <section id="formulation">
+          <div className="container">
+            <div className="section-head reveal">
+              <div>
+                <span className="eyebrow">Formulation philosophy</span>
+                <h2>Precision, not excess.</h2>
+              </div>
+              <p>Our approach draws from ingredients studied for their ability to support resilience under stress, including extremolytes such as ectoin and hydroxyectoin, within lightweight systems designed for frequent use.</p>
+            </div>
+            <div className="philosophy-grid">
+              <article className="card reveal">
+                <h3>Lightweight by design</h3>
+                <p>No heavy, occlusive feel. The goal is compatibility with movement, routine, and repeated application.</p>
+              </article>
+              <article className="card reveal">
+                <h3>Evidence-led restraint</h3>
+                <p>Every inclusion should have a role: support tolerance, reinforce hydration, and respect the realities of children&apos;s skin.</p>
+              </article>
             </div>
           </div>
         </section>
 
-        <section
-          className="section section-cta"
-          id="waitlist"
-          aria-labelledby="waitlist-heading"
-        >
-          <div className="shell cta-shell">
-            <div className="cta-block">
-              <p className="section-label">Join the waitlist</p>
-              <h2 id="waitlist-heading">Be first to hear when NOLÉA launches.</h2>
-              <p className="cta-text">
-                Sign up for early access, launch updates, and thoughtful notes as
-                the first product takes shape.
-              </p>
+        <section>
+          <div className="container">
+            <div className="section-head reveal">
+              <div>
+                <span className="eyebrow">Designed for real use</span>
+                <h2>Simple enough to keep.</h2>
+              </div>
+              <p>Care should feel nearly imperceptible—quiet enough to become routine, considered enough to matter.</p>
+            </div>
+            <div className="use-grid">
+              <article className="use-step reveal">
+                <div className="index">01 / Before swimming</div>
+                <h3>Applied to clean skin</h3>
+                <p>Used prior to pool exposure to support the skin&apos;s surface before repeated contact with chlorinated water.</p>
+              </article>
+              <article className="use-step reveal">
+                <div className="index">02 / After swimming</div>
+                <h3>Reapplied for recovery</h3>
+                <p>Used after rinsing to restore hydration and help reduce the residual stress that accumulates over time.</p>
+              </article>
+            </div>
+          </div>
+        </section>
 
-              <form className="email-form cta-form" action="/api/waitlist" method="post">
-                <label htmlFor="cta-email">Email address</label>
-                <div className="email-row">
-                  <input
-                    id="cta-email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    placeholder="you@example.com"
-                    required
-                  />
-                  <button type="submit">Get Early Access</button>
-                </div>
-              </form>
+        <section id="founder">
+          <div className="container founder-panel">
+            <div className="portrait reveal"></div>
+            <div className="founder-copy reveal">
+              <span className="eyebrow">Founder</span>
+              <h2>A considered approach.</h2>
+              <p>Noléa was developed in response to a gap between repeated environmental exposure and how children&apos;s skin is typically supported. Created in collaboration with medical professionals, the brand reflects a restrained, evidence-led view of everyday skin stressors.</p>
+              <p style={{marginTop: 'var(--space-5)'}}>Built from real exposure, not theoretical need.</p>
+              <div className="quote">A brand shaped by observation, restraint, and the realities of frequent water exposure.</div>
+              <div style={{marginTop: 'var(--space-8)'}}>
+                <a className="btn btn-secondary" href="#waitlist">Read more</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="waitlist">
+          <div className="container waitlist-shell reveal">
+            <div className="waitlist-panel">
+              <div>
+                <span className="eyebrow">Launching soon</span>
+                <h2>Be first to know.</h2>
+                <p>Join the list for early product updates, first access, and a more thoughtful release timeline.</p>
+                <form className="waitlist-form" onSubmit={(e) => { e.preventDefault(); document.getElementById('waitlist-note').textContent = "Thank you. You're on the list."; e.target.reset(); }}>
+                  <label className="sr-only" htmlFor="email">Email address</label>
+                  <div className="input-wrap">
+                    <input id="email" type="email" placeholder="Email address" aria-describedby="waitlist-note" required />
+                  </div>
+                  <button className="btn btn-primary" type="submit">Join the Waitlist</button>
+                </form>
+                <p className="fine-print" id="waitlist-note">Low-volume updates only.</p>
+              </div>
+              <div className="card" style={{background: 'color-mix(in oklab, var(--color-surface) 86%, transparent)', minWidth: 'min(100%, 320px)'}}>
+                <h3>What this page is built to do</h3>
+                <p>Establish legitimacy before noise. Clear positioning, restrained tone, and a single conversion point.</p>
+              </div>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="site-footer">
-        <div className="shell footer-inner">
-          <p>Barrier-first skincare for young swimmers.</p>
-          <p>NOLÉA — prelaunch.</p>
+      <footer>
+        <div className="container footer-inner">
+          <div className="brand" aria-label="Noléa footer mark">
+            <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="20" cy="24" r="4" stroke="currentColor" strokeWidth="2.4" fill="none"/>
+              <path d="M20 30 Q 32 22, 48 26" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" fill="none"/>
+              <path d="M12 42 Q 32 43, 52 42" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
+            </svg>
+            <span>Noléa</span>
+          </div>
+          <div className="footer-links">
+            <a href="#approach">Approach</a>
+            <a href="#formulation">Formulation</a>
+            <a href="#founder">Founder</a>
+            <a href="mailto:hello@nolea.skin" target="_blank" rel="noopener noreferrer">Contact</a>
+          </div>
         </div>
       </footer>
     </>
