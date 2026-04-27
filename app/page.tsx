@@ -1,145 +1,248 @@
+export default function HomePage() {
+  return (
+    <>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
 
-</div>
-      <section aria-labelledby="hero-heading">
-        <div className="container">
-          <p className="eyebrow">Protective skincare for young swimmers</p>
-          <h1 id="hero-heading">Protection for skin that lives in the water.</h1>
-          <p className="intro">
-            NOLEA is developing a considered skincare essential for children with repeated
-            pool exposure — created for real swim routines, with a focus on simplicity,
-            comfort, and everyday use.
-          </p>
+      <header className="site-header">
+        <div className="shell header-inner">
+          <a href="#top" className="brand" aria-label="NOLEA home">
+            <span className="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" role="img" aria-label="NOLEA logo">
+                <path
+                  d="M18 45C18 28 29 17 46 17C46 34 35 45 18 45Z"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                />
+                <path
+                  d="M18 45C21 33 29 27 40 24"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
+            <span className="brand-type">NOLEA</span>
+          </a>
 
-          <form className="waitlist-form" action="/api/waitlist" method="post">
-            <label htmlFor="email">Email address</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              required
-              placeholder="you@example.com"
-            />
-            <button type="submit">Get Early Access</button>
-          </form>
-
-          <p className="microcopy">
-            Join the waitlist for launch updates and early access. We’ll keep it thoughtful
-            and infrequent.
-          </p>
+          <nav className="header-nav" aria-label="Primary">
+            <a href="#approach">Approach</a>
+            <a href="#why">Why it exists</a>
+            <a href="#waitlist" className="nav-cta">
+              Early access
+            </a>
+          </nav>
         </div>
-      </section>
+      </header>
 
-      <section aria-labelledby="why-heading">
-        <div className="container narrow">
-          <h2 id="why-heading">Why this exists</h2>
-          <p>
-            Repeated time in the pool can be demanding on skin. Chlorine, sun, frequent
-            rinsing, and long training blocks can leave skin feeling dry, tight, and
-            overworked — especially when that routine is part of everyday life.
-          </p>
-          <p>
-            NOLEA began with a simple question: what should protective skincare look like
-            for children who spend real time in the water? We believe the answer should
-            feel light, calm, and easy to use consistently.
-          </p>
-        </div>
-      </section>
-
-      <section aria-labelledby="difference-heading">
-        <div className="container">
-          <h2 id="difference-heading">What makes it different</h2>
-          <div className="grid-3">
-            <article>
-              <h3>Made for repeated pool exposure</h3>
-              <p>
-                Designed around the realities of frequent swim schedules, not occasional use.
+      <main id="main-content">
+        <section className="hero" id="top" aria-labelledby="hero-heading">
+          <div className="shell hero-grid">
+            <div className="hero-copy">
+              <p className="eyebrow">Protective skincare for young swimmers</p>
+              <h1 id="hero-heading">
+                Protection for skin that lives in the water.
+              </h1>
+              <p className="hero-text">
+                NOLEA is developing a pediatric-informed, barrier-first skincare
+                essential for children with repeated pool exposure — created for
+                real swim routines, with a focus on simplicity, comfort, and
+                everyday use.
               </p>
-            </article>
 
-            <article>
-              <h3>Barrier-minded philosophy</h3>
-              <p>
-                A formulation direction centered on supporting comfort, resilience, and a more
-                considered daily routine.
+              <form className="email-form" action="/api/waitlist" method="post">
+                <label htmlFor="hero-email">Email address</label>
+                <div className="email-row">
+                  <input
+                    id="hero-email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                  <button type="submit">Get Early Access</button>
+                </div>
+              </form>
+
+              <p className="fine-print">
+                Join the waitlist for launch updates and early access. We&apos;ll
+                keep it thoughtful and infrequent.
               </p>
-            </article>
+            </div>
 
-            <article>
-              <h3>Simple enough to use consistently</h3>
+            <aside className="hero-panel" aria-label="Brand overview">
+              <div className="panel-top">
+                <span className="mini-label">Prelaunch</span>
+                <span className="mini-rule" />
+                <span className="mini-label">Barrier-first</span>
+              </div>
+
+              <div className="hero-panel-body">
+                <p className="panel-kicker">Our first category</p>
+                <h2>Care designed around chlorine, sun, salt, and repetition.</h2>
+                <p>
+                  The goal is simple: help support skin comfort before exposure,
+                  help reduce that stripped feeling after, help limit the effects
+                  of chlorinated water on the skin barrier, and make daily care
+                  feel easy for both kids and parents.
+                </p>
+              </div>
+
+              <div className="panel-list">
+                <div>
+                  <span className="stat-label">Built for</span>
+                  <p>Swim practice, lessons, beach days, pool weekends</p>
+                </div>
+                <div>
+                  <span className="stat-label">Designed for</span>
+                  <p>Simple family routines, not complicated regimens</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section className="section section-intro" id="why" aria-labelledby="why-heading">
+          <div className="shell narrow">
+            <p className="section-label">Why this exists</p>
+            <h2 id="why-heading">Frequent water exposure asks a lot from skin.</h2>
+            <div className="prose">
               <p>
-                Lightweight, practical, and built to fit before- and after-swim life without
-                adding friction.
+                For many kids, life in the water is routine — swim team, lessons,
+                beach days, long afternoons at the pool. Repeated exposure to
+                chlorinated water, salt, sun, rinsing, and friction can leave
+                skin feeling dry, tight, and overworked.
               </p>
-            </article>
+              <p>
+                NOLEA is being developed to support the skin barrier around those
+                moments, without turning a child&apos;s routine into a 10-step ritual.
+              </p>
+            </div>
           </div>
+        </section>
+
+        <section className="section section-approach" id="approach" aria-labelledby="approach-heading">
+          <div className="shell approach-grid">
+            <div className="approach-intro">
+              <p className="section-label">Our approach</p>
+              <h2 id="approach-heading">
+                Gentle, purposeful, and grounded in real routines.
+              </h2>
+            </div>
+
+            <div className="approach-cards">
+              <article className="approach-card large">
+                <p className="card-tag">01</p>
+                <h3>Barrier-first thinking</h3>
+                <p>
+                  We&apos;re designing around skin comfort and resilience, with a
+                  focus on repeated exposure rather than one-off use.
+                </p>
+              </article>
+
+              <article className="approach-card">
+                <p className="card-tag">02</p>
+                <h3>Routine-ready design</h3>
+                <p>
+                  Before swim, after rinse-off, after sun — the product should fit
+                  into life as it already exists.
+                </p>
+              </article>
+
+              <article className="approach-card">
+                <p className="card-tag">03</p>
+                <h3>Parent-trust language</h3>
+                <p>
+                  Calm, clear communication matters. We care about usefulness more
+                  than hype.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-rhythm" aria-labelledby="rhythm-heading">
+          <div className="shell rhythm-grid">
+            <div className="rhythm-quote">
+              <p className="quote-mark">“</p>
+              <p className="quote-text">
+                Better care, built into the rhythm that already exists.
+              </p>
+            </div>
+
+            <div className="rhythm-copy">
+              <p className="section-label">How it fits</p>
+              <h2 id="rhythm-heading">Protection before. Comfort after.</h2>
+              <div className="prose">
+                <p>
+                  NOLEA is being developed to work around the moments families
+                  already have: before swim, after rinse-off, after sun, and on
+                  high-exposure days when skin needs more support.
+                </p>
+                <p>
+                  The goal is not more complexity. It&apos;s a calmer, better-fitting
+                  layer of care for children who spend real time in the water.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-standard" aria-labelledby="standard-heading">
+          <div className="shell narrow">
+            <p className="section-label">Our standard</p>
+            <h2 id="standard-heading">
+              Children&apos;s skincare should feel calm, considered, and useful.
+            </h2>
+            <div className="prose">
+              <p>
+                We believe skincare for children should be easy to understand,
+                gentle in tone, and purposeful in design. That means a
+                barrier-first philosophy, careful formulation thinking, and a
+                brand that respects both parents and the kids these routines are
+                built around.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-cta" id="waitlist" aria-labelledby="waitlist-heading">
+          <div className="shell cta-shell">
+            <div className="cta-block">
+              <p className="section-label">Join the waitlist</p>
+              <h2 id="waitlist-heading">Be first to hear when NOLEA launches.</h2>
+              <p className="cta-text">
+                Sign up for early access, launch updates, and thoughtful notes as
+                the first product takes shape.
+              </p>
+
+              <form className="email-form cta-form" action="/api/waitlist" method="post">
+                <label htmlFor="cta-email">Email address</label>
+                <div className="email-row">
+                  <input
+                    id="cta-email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                  <button type="submit">Get Early Access</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="site-footer">
+        <div className="shell footer-inner">
+          <p>Barrier-first skincare for young swimmers.</p>
+          <p>NOLEA — prelaunch.</p>
         </div>
-      </section>
-
-      <section aria-labelledby="approach-heading">
-        <div className="container narrow">
-          <h2 id="approach-heading">Our approach</h2>
-          <p>
-            NOLEA is being built with an intentionally narrow focus: thoughtful skincare for
-            young water athletes. The goal is not to create a 10-step system or an overloaded
-            product line, but to develop one strong solution first with attention to formula
-            feel, family usability, and long-term trust.
-          </p>
-          <p>
-            We are interested in restraint over noise — clear purpose, careful choices, and a
-            brand experience that feels calm from the formula philosophy to the website itself.
-          </p>
-        </div>
-      </section>
-
-      <section aria-labelledby="founder-heading">
-        <div className="container narrow">
-          <h2 id="founder-heading">Founder note</h2>
-          <p>
-            I started NOLEA after seeing how normal repeated pool exposure had become for
-            young athletes, and how little product design seemed to reflect that reality.
-            The goal is not more skincare — it is better-considered skincare for a very
-            specific life in and around the water.
-          </p>
-        </div>
-      </section>
-
-      <section aria-labelledby="faq-heading">
-        <div className="container narrow">
-          <h2 id="faq-heading">FAQ</h2>
-
-          <div className="faq-item">
-            <h3>What is NOLEA?</h3>
-            <p>
-              NOLEA is a skincare brand in development focused on protective care for children
-              and young athletes with repeated pool exposure.
-            </p>
-          </div>
-
-          <div className="faq-item">
-            <h3>When will it launch?</h3>
-            <p>
-              We’re currently in development, and the waitlist is the best way to hear first
-              about timing and early access.
-            </p>
-          </div>
-
-          <div className="faq-item">
-            <h3>Who is it designed for?</h3>
-            <p>
-              NOLEA is being created with young swimmers and water-sport routines in mind.
-            </p>
-          </div>
-
-          <div className="faq-item">
-            <h3>Will there be more than one product?</h3>
-            <p>
-              The focus right now is on developing the first product thoughtfully before
-              expanding.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+      </footer>
+    </>
   );
 }
