@@ -1,60 +1,36 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nolea.skin"),
-  title: {
-    default: "NOLÉA",
-    template: "%s | NOLÉA",
-  },
-  description: "Barrier-first skincare for young swimmers.",
-  applicationName: "NOLÉA",
-  keywords: [
-    "NOLÉA",
-    "skincare for swimmers",
-    "children's skincare",
-    "barrier-first skincare",
-    "chlorine skincare",
-    "swim skincare",
-    "pediatric skincare",
-  ],
-  authors: [{ name: "NOLÉA" }],
-  creator: "NOLÉA",
-  publisher: "NOLÉA",
-  alternates: {
-    canonical: "/",
-  },
+  title: 'Noléa — Protection, before it\'s needed.',
+  description: 'Noléa is a refined skincare concept focused on supporting children\'s skin exposed to chlorinated water through a restrained, evidence-led approach.',
   openGraph: {
-    title: "NOLÉA",
-    description: "Barrier-first skincare for young swimmers.",
-    url: "https://nolea.skin",
-    siteName: "NOLÉA",
-    locale: "en_US",
-    type: "website",
+    title: 'Noléa — Protection, before it\'s needed.',
+    description: 'A refined approach to supporting children\'s skin exposed to chlorinated water.',
+    type: 'website',
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "NOLÉA",
-    description: "Barrier-first skincare for young swimmers.",
-  },
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon", type: "image/png" },
-    ],
-    apple: [{ url: "/apple-icon.png" }],
-    shortcut: ["/favicon.ico"],
-  },
-};
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://api.fontshare.com" />
+      </head>
+      <body className={inter.variable}>
+        {children}
+      </body>
     </html>
-  );
+  )
 }
