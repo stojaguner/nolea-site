@@ -1,8 +1,4 @@
-export default function HomePage() {
-  return (
-    <main>
-      <div style={{ background: 'red', color: 'white', padding: '20px', fontSize: '32px' }}>
-  TEST APP PAGE LIVE
+
 </div>
       <section aria-labelledby="hero-heading">
         <div className="container">
