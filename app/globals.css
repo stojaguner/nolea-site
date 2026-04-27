@@ -284,7 +284,7 @@ footer { padding: var(--space-10) 0 var(--space-12); border-top: 1px solid var(-
   .reveal { opacity: 1; transform: none; }
 }
 
-/* Soft background textures */
+/* Soft background texture - paper only */
 body::before {
   content: "";
   position: fixed;
@@ -296,16 +296,4 @@ body::before {
   background-repeat: repeat;
   pointer-events: none;
   mix-blend-mode: multiply;
-}
-section:nth-child(even)::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  opacity: 0.15;
-  background-image: url('/texture-wash.png');
-  background-size: 600px;
-  background-repeat: repeat;
-  pointer-events: none;
-  mix-blend-mode: soft-light;
 }
