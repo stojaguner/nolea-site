@@ -1,308 +1,390 @@
-'use client';
-import React from 'react';
+import type { Metadata } from "next";
+import Link from "next/link";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "NOLÉA | Invisible protection. Visible care.",
+  description:
+    "Barrier-first skincare for children and families with repeated exposure to chlorine, sun, salt, and water.",
+};
+
+const pillars = [
+  {
+    title: "Pre-swim support",
+    body: "Designed to be applied before pool exposure, when support is usually missing from the routine.",
+  },
+  {
+    title: "Post-swim recovery",
+    body: "Used again after rinsing to help skin feel hydrated, comfortable, and less stressed over time.",
+  },
+  {
+    title: "Barrier-focused",
+    body: "Built around the realities of repeated exposure rather than treating chlorine like a one-time event.",
+  },
+];
+
+const routine = [
+  {
+    step: "01",
+    title: "Before swimming",
+    body: "Apply to clean, dry skin before pool time as part of a simple barrier-first routine alongside sunscreen.",
+  },
+  {
+    step: "02",
+    title: "After swimming",
+    body: "Reapply after rinsing to help restore hydration and support comfort after repeated contact with chlorine and water.",
+  },
+];
+
+const formulation = [
+  {
+    title: "Extremolyte-led",
+    body: "Powered by ingredients like Ectoin and Hydroxyectoin, chosen for their role in supporting hydration and barrier resilience under environmental stress.",
+  },
+  {
+    title: "Lightweight by design",
+    body: "No heavy residue. No sticky finish. Designed to feel elegant enough for repeated, real-world use.",
+  },
+  {
+    title: "Evidence-led restraint",
+    body: "Every inclusion should serve a purpose: support tolerance, reinforce hydration, and respect the realities of children’s skin.",
+  },
+];
+
+export default function HomePage() {
   return (
-    <>
-      <a href="#main" className="skip-link">Skip to content</a>
-      <header className="header">
-        <div className="container header-inner">
-          <a className="brand" href="#top" aria-label="Noléa home">
-            <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-              <circle cx="20" cy="24" r="4" stroke="currentColor" strokeWidth="2.4" fill="none" />
-              <path d="M20 30 Q 32 22, 48 26" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" fill="none" />
-              <path d="M12 42 Q 32 43, 52 42" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" fill="none" />
-            </svg>
-            <span>Noléa</span>
+    <main className="min-h-screen bg-[#f7f5f0] text-[#1f2937]">
+      <section className="border-b border-black/5">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-8">
+          <a
+            href="#top"
+            className="text-sm font-medium uppercase tracking-[0.18em] text-[#111827]"
+          >
+            NOLÉA
           </a>
 
-          <nav className="nav" id="nav">
-            <a href="#approach">Approach</a>
-            <a href="#formulation">Formulation</a>
-            <a href="#founder">Founder</a>
-            <a href="#waitlist">Waitlist</a>
+          <nav className="hidden items-center gap-6 md:flex">
+            <a
+              href="#approach"
+              className="text-sm text-[#6b7280] transition hover:text-[#111827]"
+            >
+              Approach
+            </a>
+            <a
+              href="#formula"
+              className="text-sm text-[#6b7280] transition hover:text-[#111827]"
+            >
+              Formula
+            </a>
+            <a
+              href="#routine"
+              className="text-sm text-[#6b7280] transition hover:text-[#111827]"
+            >
+              Routine
+            </a>
+            <Link
+              href="/learn"
+              className="text-sm text-[#6b7280] transition hover:text-[#111827]"
+            >
+              Learn
+            </Link>
           </nav>
+        </div>
+      </section>
 
-          <div className="header-actions">
-            <button className="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open navigation">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M3 6h18M3 12h18M3 18h18" />
-              </svg>
-            </button>
-            <button className="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-            </button>
-            <a className="btn btn-secondary" href="#waitlist">Join waitlist</a>
+      <section id="top" className="mx-auto max-w-6xl px-6 pb-10 pt-14 md:px-8 md:pb-16 md:pt-24">
+        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          <div>
+            <p className="mb-5 text-[11px] font-medium uppercase tracking-[0.24em] text-[#6b7280]">
+              Science-backed pediatric swim-skin care
+            </p>
+
+            <h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.05em] text-[#111827] md:text-7xl md:leading-[0.96]">
+              Protection, before it&apos;s needed.
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#4b5563] md:text-lg">
+              A weightless, barrier-first mist designed for children and
+              families with repeated exposure to chlorine, sun, salt, and water
+              — developed with restraint, shaped by real use, and informed by
+              science.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#launch"
+                className="inline-flex items-center rounded-full bg-[#111827] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#1f2937]"
+              >
+                Join the list
+              </a>
+              <Link
+                href="/learn"
+                className="inline-flex items-center rounded-full border border-black/10 px-5 py-3 text-sm font-medium text-[#111827] transition hover:bg-black/5"
+              >
+                Explore Learn
+              </Link>
+            </div>
+
+            <p className="mt-8 max-w-3xl text-sm leading-7 text-[#6b7280]">
+              Fragrance-free. Lightweight. Sensitive-skin minded. Developed in
+              collaboration with a cosmetic chemist and university researchers,
+              with oversight from a pediatric surgeon.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] border border-black/8 bg-white/70 p-6 backdrop-blur-sm md:p-8">
+            <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#6b7280]">
+              What this page is built to say
+            </p>
+
+            <div className="mt-6 space-y-5">
+              {pillars.map((item) => (
+                <div key={item.title} className="border-t border-black/6 pt-5 first:border-t-0 first:pt-0">
+                  <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
+                    {item.title}
+                  </h2>
+                  <p className="mt-2 text-[16px] leading-7 text-[#4b5563]">
+                    {item.body}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </header>
+      </section>
 
-      <main id="main">
-        <section className="hero" id="top">
-          <div className="container hero-grid">
-            <div className="hero-copy reveal visible">
-              <span className="eyebrow">Science-backed pediatric swim-skin care</span>
-              <h1>Protection, before it&apos;s needed.</h1>
-              <p>
-                A refined approach to supporting children&apos;s skin exposed to chlorinated water—designed with restraint,
-                informed by real exposure, and shaped for everyday use.
-              </p>
-              <div className="hero-actions">
-                <a className="btn btn-primary" href="#waitlist">Join the Waitlist</a>
-                <a className="btn btn-secondary" href="#approach">Explore the approach</a>
-              </div>
-              <div className="hero-meta" aria-label="Product focus highlights">
-                <span>Pre-swim support</span>
-                <span>Post-swim recovery</span>
-                <span>Barrier-focused</span>
-              </div>
-            </div>
-
-            <div className="hero-visual reveal visible" aria-hidden="true">
-              <div className="swirl"></div>
-              <div className="visual-card two">
-                <small>Focused on</small>
-                <strong>Repeated pool exposure</strong>
-                <p>Support for skin under frequent environmental stress, not occasional treatment alone.</p>
-              </div>
-              <div className="mist-bottle"></div>
-              <div className="visual-card one">
-                <small>Formulation lens</small>
-                <strong>Precision, not excess</strong>
-                <p>Lightweight, water-based, compatible with regular use and active routines.</p>
-              </div>
-            </div>
+      <section
+        id="approach"
+        className="border-y border-black/5 bg-[#efece5]"
+      >
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:px-8 md:py-20 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
+              The problem
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#111827] md:text-5xl">
+              Repeated exposure, rarely considered.
+            </h2>
           </div>
-        </section>
 
-        <section id="approach">
-          <div className="container">
-            <div className="section-head reveal">
-              <div>
-                <span className="eyebrow">The problem</span>
-                <h2>Repeated exposure, rarely considered.</h2>
-              </div>
-              <p>
-                For children who spend meaningful time in pools, chlorinated water is not occasional.
-                It is repeated, cumulative, and often reduced to the language of ordinary dryness.
-              </p>
-            </div>
-
-            <div className="problem-grid">
-              <article className="card reveal">
-                <h3>What appears mild is often ongoing.</h3>
-                <p>
-                  Dryness, roughness, and heightened sensitivity can reflect a pattern of barrier disruption
-                  rather than a single post-swim reaction.
-                </p>
-              </article>
-              <article className="card reveal">
-                <h3>Support usually starts too late.</h3>
-                <p>
-                  Most products are positioned after exposure. Noléa is built around a more complete sequence:
-                  before contact, and after it.
-                </p>
-              </article>
-            </div>
+          <div className="space-y-6">
+            <p className="text-[17px] leading-8 text-[#374151]">
+              For children who spend meaningful time in pools, chlorinated water
+              is not occasional. It is repeated, cumulative, and often reduced
+              to the language of ordinary dryness.
+            </p>
+            <p className="text-[17px] leading-8 text-[#374151]">
+              What looks mild can reflect an ongoing pattern of barrier stress:
+              roughness, tightness, heightened sensitivity, and discomfort that
+              builds over time rather than appearing as a single post-swim
+              reaction.
+            </p>
+            <p className="text-[17px] leading-8 text-[#374151]">
+              Most products enter the routine too late. NOLÉA is built around a
+              more complete sequence: before contact, and after it.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section>
-          <div className="container shift-panel reveal">
-            <div>
-              <div className="shift-kicker">Positioning shift</div>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: 'var(--text-xl)',
-                  lineHeight: 1.05,
-                  letterSpacing: '-0.03em',
-                  maxWidth: '12ch',
-                }}
-              >
-                From reactive to preparatory.
-              </h2>
-              <p
-                style={{
-                  marginTop: 'var(--space-5)',
-                  color: 'var(--color-text-muted)',
-                  maxWidth: '36ch',
-                }}
-              >
-                A more considered approach supports the skin before and after environmental stressors,
-                rather than only responding once disruption has already appeared.
+      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
+        <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
+              Positioning shift
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#111827] md:text-5xl">
+              From reactive to preparatory.
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-[1.75rem] border border-black/8 bg-white/75 p-6">
+              <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#6b7280]">
+                Before swimming
+              </p>
+              <p className="mt-3 text-[17px] leading-8 text-[#374151]">
+                Support the skin barrier prior to exposure, rather than waiting
+                for visible discomfort to appear.
               </p>
             </div>
 
-            <div className="phase-list">
-              <div className="phase-item">
-                <strong>Before swimming</strong>
-                <span>Support barrier function prior to exposure.</span>
-              </div>
-              <div className="phase-item">
-                <strong>After swimming</strong>
-                <span>Replenish hydration and help the skin settle after contact.</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="formulation">
-          <div className="container">
-            <div className="section-head reveal">
-              <div>
-                <span className="eyebrow">Formulation philosophy</span>
-                <h2>Precision, not excess.</h2>
-              </div>
-              <p>
-                Our approach draws from ingredients studied for their ability to support resilience under stress,
-                including extremolytes such as ectoin and hydroxyectoin, within lightweight systems designed for frequent use.
+            <div className="rounded-[1.75rem] border border-black/8 bg-white/75 p-6">
+              <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#6b7280]">
+                After swimming
+              </p>
+              <p className="mt-3 text-[17px] leading-8 text-[#374151]">
+                Replenish hydration and help the skin settle after contact with
+                chlorine, sun, salt, and repeated washing.
               </p>
             </div>
-
-            <div className="philosophy-grid">
-              <article className="card reveal">
-                <h3>Lightweight by design</h3>
-                <p>
-                  No heavy, occlusive feel. The goal is compatibility with movement, routine, and repeated application.
-                </p>
-              </article>
-              <article className="card reveal">
-                <h3>Evidence-led restraint</h3>
-                <p>
-                  Every inclusion should have a role: support tolerance, reinforce hydration,
-                  and respect the realities of children&apos;s skin.
-                </p>
-              </article>
-            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section>
-          <div className="container">
-            <div className="section-head reveal">
-              <div>
-                <span className="eyebrow">Designed for real use</span>
-                <h2>Simple enough to keep.</h2>
-              </div>
-              <p>
-                Care should feel nearly imperceptible—quiet enough to become routine, considered enough to matter.
-              </p>
-            </div>
-
-            <div className="use-grid">
-              <article className="use-step reveal">
-                <div className="index">01 / Before swimming</div>
-                <h3>Applied to clean skin</h3>
-                <p>
-                  Used prior to pool exposure to support the skin&apos;s surface before repeated contact with chlorinated water.
-                </p>
-              </article>
-              <article className="use-step reveal">
-                <div className="index">02 / After swimming</div>
-                <h3>Reapplied for recovery</h3>
-                <p>
-                  Used after rinsing to restore hydration and help reduce the residual stress that accumulates over time.
-                </p>
-              </article>
-            </div>
+      <section
+        id="formula"
+        className="border-y border-black/5 bg-white/60"
+      >
+        <div className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
+          <div className="max-w-3xl">
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
+              Formulation philosophy
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#111827] md:text-5xl">
+              Precision, not excess.
+            </h2>
+            <p className="mt-6 text-[17px] leading-8 text-[#374151]">
+              Our approach draws from ingredients studied for their role in
+              supporting skin resilience under stress, including extremolytes
+              such as Ectoin and Hydroxyectoin, within lightweight systems
+              designed for frequent use.
+            </p>
           </div>
-        </section>
 
-        <section id="founder">
-          <div className="container founder-panel">
-            <div className="portrait reveal"></div>
-            <div className="founder-copy reveal">
-              <span className="eyebrow">Founder</span>
-              <h2>A considered approach.</h2>
-              <p>
-                Noléa was developed in response to a gap between repeated environmental exposure and how children&apos;s skin
-                is typically supported. Created in collaboration with medical professionals, the brand reflects a restrained,
-                evidence-led view of everyday skin stressors.
-              </p>
-              <p style={{ marginTop: 'var(--space-5)' }}>Built from real exposure, not theoretical need.</p>
-              <div className="quote">
-                A brand shaped by observation, restraint, and the realities of frequent water exposure.
-              </div>
-              <div style={{ marginTop: 'var(--space-8)' }}>
-                <a className="btn btn-secondary" href="#waitlist">Read more</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="waitlist">
-          <div className="container waitlist-shell reveal">
-            <div className="waitlist-panel">
-              <div>
-                <span className="eyebrow">Launching soon</span>
-                <h2>Be first to know.</h2>
-                <p>
-                  Join the list for early product updates, first access, and a more thoughtful release timeline.
-                </p>
-
-                <form
-                  className="waitlist-form"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    const note = document.getElementById('waitlist-note');
-                    if (note) {
-                      note.textContent = "Thank you. You&apos;re on the list.";
-                    }
-                    (e.currentTarget as HTMLFormElement).reset();
-                  }}
-                >
-                  <label className="sr-only" htmlFor="email">Email address</label>
-                  <div className="input-wrap">
-                    <input
-                      id="email"
-                      type="email"
-                      placeholder="Email address"
-                      aria-describedby="waitlist-note"
-                      required
-                    />
-                  </div>
-                  <button className="btn btn-primary" type="submit">Join the Waitlist</button>
-                </form>
-
-                <p className="fine-print" id="waitlist-note">Low-volume updates only.</p>
-              </div>
-
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {formulation.map((item) => (
               <div
-                className="card"
-                style={{
-                  background: 'color-mix(in oklab, var(--color-surface) 86%, transparent)',
-                  minWidth: 'min(100%, 320px)',
-                }}
+                key={item.title}
+                className="rounded-[1.75rem] border border-black/8 bg-[#faf8f3] p-6"
               >
-                <h3>What this page is built to do</h3>
-                <p>Establish legitimacy before noise. Clear positioning, restrained tone, and a single conversion point.</p>
+                <h3 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-[16px] leading-7 text-[#4b5563]">
+                  {item.body}
+                </p>
               </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <div className="container footer-inner">
-          <div className="brand" aria-label="Noléa footer mark">
-            <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-              <circle cx="20" cy="24" r="4" stroke="currentColor" strokeWidth="2.4" fill="none" />
-              <path d="M20 30 Q 32 22, 48 26" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" fill="none" />
-              <path d="M12 42 Q 32 43, 52 42" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" fill="none" />
-            </svg>
-            <span>Noléa</span>
-          </div>
-          <div className="footer-links">
-            <a href="#approach">Approach</a>
-            <a href="#formulation">Formulation</a>
-            <a href="#founder">Founder</a>
-            <a href="mailto:hello@nolea.skin" target="_blank" rel="noopener noreferrer">Contact</a>
+            ))}
           </div>
         </div>
-      </footer>
-    </>
+      </section>
+
+      <section
+        id="routine"
+        className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24"
+      >
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
+              Designed for real use
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#111827] md:text-5xl">
+              Simple enough to keep.
+            </h2>
+            <p className="mt-6 text-[17px] leading-8 text-[#374151]">
+              Care should feel nearly imperceptible — quiet enough to become
+              routine, considered enough to matter.
+            </p>
+          </div>
+
+          <div className="space-y-5">
+            {routine.map((item) => (
+              <div
+                key={item.step}
+                className="rounded-[1.75rem] border border-black/8 bg-white/80 p-6 md:p-8"
+              >
+                <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#6b7280]">
+                  {item.step} / {item.title}
+                </p>
+                <p className="mt-3 text-[17px] leading-8 text-[#374151]">
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-black/5 bg-[#efece5]">
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:px-8 md:py-24 lg:grid-cols-[1fr_1fr]">
+          <div>
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
+              Founder
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#111827] md:text-5xl">
+              A considered approach.
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            <p className="text-[17px] leading-8 text-[#374151]">
+              NOLÉA was developed in response to the gap between repeated
+              environmental exposure and how children&apos;s skin is typically
+              supported. Built for real swim life, the brand reflects a
+              restrained, evidence-led view of everyday skin stressors.
+            </p>
+            <p className="text-[17px] leading-8 text-[#374151]">
+              Developed in collaboration with a cosmetic chemist and university
+              researchers, with oversight from a pediatric surgeon, NOLÉA is
+              shaped by observation, routine, and the realities of frequent
+              water exposure.
+            </p>
+            <p className="text-[17px] leading-8 text-[#374151]">
+              Built from real exposure, not theoretical need.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
+        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="rounded-[2rem] border border-black/8 bg-white/80 p-6 md:p-8">
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
+              Learn
+            </p>
+            <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-[#111827] md:text-4xl">
+              Explore the thinking behind barrier-first swim care.
+            </h2>
+            <p className="mt-4 text-[17px] leading-8 text-[#4b5563]">
+              Read practical guidance on chlorine exposure, children&apos;s
+              skin, and how to build gentler routines around frequent pool time.
+            </p>
+            <div className="mt-6">
+              <Link
+                href="/learn"
+                className="inline-flex items-center rounded-full border border-black/10 px-5 py-3 text-sm font-medium text-[#111827] transition hover:bg-black/5"
+              >
+                Visit Learn
+              </Link>
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-black/8 bg-[#111827] p-6 text-white md:p-8" id="launch">
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/60">
+              Launching soon
+            </p>
+            <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] md:text-4xl">
+              Be first to know.
+            </h2>
+            <p className="mt-4 max-w-xl text-[17px] leading-8 text-white/75">
+              Join the list for early product updates, first access, and a more
+              thoughtful release timeline.
+            </p>
+
+            <form className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <label htmlFor="email" className="sr-only">
+                Email address
+              </label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter your email"
+                className="min-h-[48px] flex-1 rounded-full border border-white/10 bg-white/8 px-5 text-sm text-white placeholder:text-white/45 outline-none transition focus:border-white/30"
+              />
+              <button
+                type="submit"
+                className="min-h-[48px] rounded-full bg-white px-5 text-sm font-medium text-[#111827] transition hover:bg-[#f3f4f6]"
+              >
+                Join waitlist
+              </button>
+            </form>
+
+            <p className="mt-4 text-sm leading-7 text-white/55">
+              Low-volume updates only.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
