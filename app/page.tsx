@@ -7,21 +7,6 @@ export const metadata: Metadata = {
     "Barrier-first skincare for children and families with repeated exposure to chlorine, sun, salt, and water.",
 };
 
-const pillars = [
-  {
-    title: "Pre-swim support",
-    body: "Designed to be applied before pool exposure, when support is usually missing from the routine.",
-  },
-  {
-    title: "Post-swim recovery",
-    body: "Used again after rinsing to help skin feel hydrated, comfortable, and less stressed over time.",
-  },
-  {
-    title: "Barrier-focused",
-    body: "Built around the realities of repeated exposure rather than treating chlorine like a one-time event.",
-  },
-];
-
 const routine = [
   {
     step: "01",
@@ -31,7 +16,7 @@ const routine = [
   {
     step: "02",
     title: "After swimming",
-    body: "Reapply after rinsing to help restore hydration and support comfort after repeated contact with chlorine and water.",
+    body: "Reapply after rinsing to restore hydration and help skin feel calmer, more comfortable, and better supported after repeated exposure.",
   },
 ];
 
@@ -91,7 +76,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="top" className="mx-auto max-w-6xl px-6 pb-10 pt-14 md:px-8 md:pb-16 md:pt-24">
+      <section
+        id="top"
+        className="mx-auto max-w-6xl px-6 pb-10 pt-14 md:px-8 md:pb-16 md:pt-24"
+      >
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <div>
             <p className="mb-5 text-[11px] font-medium uppercase tracking-[0.24em] text-[#6b7280]">
@@ -103,10 +91,9 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-[#4b5563] md:text-lg">
-              A weightless, barrier-first mist designed for children and
-              families with repeated exposure to chlorine, sun, salt, and water
-              — developed with restraint, shaped by real use, and informed by
-              science.
+              A refined, barrier-first approach to supporting children&apos;s
+              skin exposed to chlorinated water—designed with restraint,
+              informed by real exposure, and shaped for everyday use.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -133,20 +120,39 @@ export default function HomePage() {
 
           <div className="rounded-[2rem] border border-black/8 bg-white/70 p-6 backdrop-blur-sm md:p-8">
             <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#6b7280]">
-              What this page is built to say
+              Why it exists
             </p>
 
             <div className="mt-6 space-y-5">
-              {pillars.map((item) => (
-                <div key={item.title} className="border-t border-black/6 pt-5 first:border-t-0 first:pt-0">
-                  <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
-                    {item.title}
-                  </h2>
-                  <p className="mt-2 text-[16px] leading-7 text-[#4b5563]">
-                    {item.body}
-                  </p>
-                </div>
-              ))}
+              <div className="border-t border-black/6 pt-5 first:border-t-0 first:pt-0">
+                <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
+                  Repeated exposure changes the need
+                </h2>
+                <p className="mt-2 text-[16px] leading-7 text-[#4b5563]">
+                  Swim lessons, swim team, and water polo create a pattern of
+                  contact that ordinary aftercare often fails to address.
+                </p>
+              </div>
+
+              <div className="border-t border-black/6 pt-5">
+                <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
+                  Barrier support should start earlier
+                </h2>
+                <p className="mt-2 text-[16px] leading-7 text-[#4b5563]">
+                  Most routines begin after discomfort appears. NOLÉA is built
+                  around support before exposure and after it.
+                </p>
+              </div>
+
+              <div className="border-t border-black/6 pt-5">
+                <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
+                  Daily use should feel invisible
+                </h2>
+                <p className="mt-2 text-[16px] leading-7 text-[#4b5563]">
+                  The best support is the kind families will actually keep using
+                  — weightless, uncomplicated, and easy to return to.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -173,10 +179,9 @@ export default function HomePage() {
               to the language of ordinary dryness.
             </p>
             <p className="text-[17px] leading-8 text-[#374151]">
-              What looks mild can reflect an ongoing pattern of barrier stress:
-              roughness, tightness, heightened sensitivity, and discomfort that
-              builds over time rather than appearing as a single post-swim
-              reaction.
+              Dryness, roughness, tightness, and heightened sensitivity often
+              reflect an ongoing pattern of barrier stress rather than a one-time
+              post-swim reaction.
             </p>
             <p className="text-[17px] leading-8 text-[#374151]">
               Most products enter the routine too late. NOLÉA is built around a
@@ -310,17 +315,20 @@ export default function HomePage() {
             <p className="text-[17px] leading-8 text-[#374151]">
               NOLÉA was developed in response to the gap between repeated
               environmental exposure and how children&apos;s skin is typically
-              supported. Built for real swim life, the brand reflects a
-              restrained, evidence-led view of everyday skin stressors.
+              supported.
             </p>
             <p className="text-[17px] leading-8 text-[#374151]">
               Developed in collaboration with a cosmetic chemist and university
-              researchers, with oversight from a pediatric surgeon, NOLÉA is
-              shaped by observation, routine, and the realities of frequent
-              water exposure.
+              researchers, with oversight from a pediatric surgeon, the brand
+              reflects a restrained, evidence-led view of everyday skin
+              stressors.
             </p>
             <p className="text-[17px] leading-8 text-[#374151]">
               Built from real exposure, not theoretical need.
+            </p>
+            <p className="text-[17px] leading-8 text-[#374151]">
+              A brand shaped by observation, routine, and the realities of
+              frequent water exposure.
             </p>
           </div>
         </div>
@@ -330,14 +338,14 @@ export default function HomePage() {
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="rounded-[2rem] border border-black/8 bg-white/80 p-6 md:p-8">
             <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
-              Learn
+              Learn more
             </p>
             <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-[#111827] md:text-4xl">
               Explore the thinking behind barrier-first swim care.
             </h2>
             <p className="mt-4 text-[17px] leading-8 text-[#4b5563]">
-              Read practical guidance on chlorine exposure, children&apos;s
-              skin, and how to build gentler routines around frequent pool time.
+              Explore practical guidance on chlorine exposure, children&apos;s
+              skin, and barrier-first swim care.
             </p>
             <div className="mt-6">
               <Link
@@ -349,7 +357,10 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-black/8 bg-[#111827] p-6 text-white md:p-8" id="launch">
+          <div
+            className="rounded-[2rem] border border-black/8 bg-[#111827] p-6 text-white md:p-8"
+            id="launch"
+          >
             <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/60">
               Launching soon
             </p>
