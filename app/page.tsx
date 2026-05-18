@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "NOLÉA | Invisible protection. Visible care.",
+  title: "NOLÉA™ | Invisible protection. Visible care.",
   description:
     "Barrier-first skincare for children and families with repeated exposure to chlorine, sun, salt, and water.",
 };
@@ -45,6 +45,12 @@ export default function HomePage() {
             className="text-sm font-medium uppercase tracking-[0.18em] text-[#111827]"
           >
             NOLÉA
+            <sup
+              aria-label="trademark"
+              className="ml-0.5 align-super text-[0.55em] tracking-normal"
+            >
+              ™
+            </sup>
           </a>
 
           <nav className="hidden items-center gap-6 md:flex">
@@ -139,8 +145,14 @@ export default function HomePage() {
                   Barrier support should start earlier
                 </h2>
                 <p className="mt-2 text-[16px] leading-7 text-[#4b5563]">
-                  Most routines begin after discomfort appears. NOLÉA is built
-                  around support before exposure and after it.
+                  Most routines begin after discomfort appears. NOLÉA
+                  <sup
+                    aria-label="trademark"
+                    className="align-super text-[0.55em]"
+                  >
+                    ™
+                  </sup>{" "}
+                  is built around support before exposure and after it.
                 </p>
               </div>
 
