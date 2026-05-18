@@ -196,8 +196,14 @@ export default function HomePage() {
               post-swim reaction.
             </p>
             <p className="text-[17px] leading-8 text-[#374151]">
-              Most products enter the routine too late. NOLÉA is built around a
-              more complete sequence: before contact, and after it.
+              Most products enter the routine too late. NOLÉA<sup
+                aria-label="trademark"
+                className="align-super text-[0.55em]"
+              >
+                ™
+              </sup>{" "}
+              is built around a more complete sequence: before contact, and
+              after it.
             </p>
           </div>
         </div>
@@ -325,7 +331,13 @@ export default function HomePage() {
 
           <div className="space-y-6">
             <p className="text-[17px] leading-8 text-[#374151]">
-              NOLÉA was developed in response to the gap between repeated
+              NOLÉA<sup
+                aria-label="trademark"
+                className="align-super text-[0.55em]"
+              >
+                ™
+              </sup>{" "}
+              was developed in response to the gap between repeated
               environmental exposure and how children&apos;s skin is typically
               supported.
             </p>
