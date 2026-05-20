@@ -465,6 +465,31 @@ textarea::placeholder {
   }
 }
 
+/* Hero CTA buttons (top of page, next to nav).
+   The mobile body-copy overrides above use !important on common
+   inline color utilities, which can bleed into anchor descendants
+   and make the dark primary pill look muddy and the outline
+   secondary pill look invisible against the cream page.
+   Lock in explicit colors so both buttons read crisply on mobile. */
+@media (max-width: 768px) {
+  /* Primary CTA: solid ink pill with confident white label */
+  main a[href="#launch"].rounded-full {
+    background-color: #0b1220 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border: 1px solid #0b1220 !important;
+  }
+
+  /* Secondary CTA: outline pill — make the border and label
+     legible against the cream background without going heavy */
+  main a[href="/learn"].rounded-full {
+    color: #0b1220 !important;
+    -webkit-text-fill-color: #0b1220 !important;
+    border-color: rgba(11, 18, 32, 0.45) !important;
+    background-color: rgba(255, 255, 255, 0.6) !important;
+  }
+}
+
 @media (max-width: 768px) and (prefers-color-scheme: dark) {
   main p,
   p {
