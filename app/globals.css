@@ -355,6 +355,13 @@ textarea::placeholder {
   color: var(--text-faint);
 }
 
+/* ===========================================================
+   MOBILE READABILITY OVERRIDES
+   The page uses arbitrary Tailwind color classes (text-[#1f2937],
+   text-[#374151], etc.) inline. To make mobile body copy
+   decisively darker on small screens we must override those
+   utilities with !important inside the mobile media query.
+   ===========================================================*/
 @media (max-width: 768px) {
   body {
     line-height: 1.6;
@@ -364,43 +371,79 @@ textarea::placeholder {
     letter-spacing: -0.045em;
   }
 
-  p {
+  /* Base mobile body copy: nearly ink-black for confident contrast */
+  main p,
+  main p.text-\[\#1f2937\],
+  p.text-\[\#1f2937\] {
+    color: #111827 !important;
     line-height: 1.82;
-    color: #1f2937;
   }
 
+  /* Eyebrow/section labels: previously #374151 — push darker */
+  main p.text-\[\#374151\],
+  p.text-\[\#374151\],
   .eyebrow,
   .text-muted,
   small {
-    color: #374151;
+    color: #1f2937 !important;
+  }
+
+  /* Navigation links and other muted #374151 anchors */
+  main a.text-\[\#374151\],
+  a.text-\[\#374151\] {
+    color: #1f2937 !important;
   }
 
   .text-faint {
-    color: #4b5563;
+    color: #374151 !important;
   }
 
-  main p {
-    color: #1f2937;
+  /* Headings already #111827 — keep them, but ensure no inherited fade */
+  main h1.text-\[\#111827\],
+  main h2.text-\[\#111827\],
+  main h3.text-\[\#111827\],
+  h1.text-\[\#111827\],
+  h2.text-\[\#111827\],
+  h3.text-\[\#111827\] {
+    color: #0b1220 !important;
+  }
+
+  /* Privacy and footer-like containers using muted tones */
+  .meta {
+    color: #1f2937 !important;
+  }
+}
+
+/* Preserve white-on-dark-panel copy inside #launch CTA on mobile */
+@media (max-width: 768px) {
+  #launch p,
+  #launch h2,
+  #launch label,
+  .dark-panel p,
+  .dark-panel h2,
+  .dark-panel label {
+    color: #ffffff !important;
+  }
+  #launch p.text-white\/85,
+  #launch p.text-white\/95 {
+    color: rgba(255, 255, 255, 0.95) !important;
   }
 }
 
 @media (max-width: 768px) and (prefers-color-scheme: dark) {
+  main p,
   p {
-    color: #ece7df;
+    color: #f3ede4 !important;
   }
 
   .eyebrow,
   .text-muted,
   small {
-    color: #e0d9cf;
+    color: #e8e1d6 !important;
   }
 
   .text-faint {
-    color: #b8b1a7;
-  }
-
-  main p {
-    color: #ece7df;
+    color: #cfc7bb !important;
   }
 }
 

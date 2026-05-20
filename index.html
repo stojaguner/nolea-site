@@ -77,8 +77,8 @@
     .waitlist-input { flex: 1 1 220px; min-width: 0; border-radius: 999px; border: 1px solid var(--border); padding: 10px 14px; font-size: 13px; background: #fdfbf7; }
     footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: #3a3a3a; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; }
     .footer-links { display: flex; gap: 12px; }
-    @media (max-width: 800px) {
-      :root { --muted: #3a3a3a; }
+    @media (max-width: 768px) {
+      :root { --muted: #1f2937; }
       .eyebrow,
       .section-heading,
       .card-label,
@@ -86,14 +86,16 @@
       .product-sub,
       .product-meta,
       .future-label,
-      .hero-note { color: #2f2f2f; }
+      .hero-note { color: #1f2937 !important; }
       .card-body,
       .section-intro,
       .hero-sub,
       .list-muted,
       .faq-a,
-      .future-copy { color: #333333; }
-      footer { color: #2f2f2f; }
+      .future-copy,
+      p { color: #111827 !important; }
+      h1, h2, h3 { color: #0b1220 !important; }
+      footer { color: #1f2937 !important; }
     }
   </style>
 </head>
