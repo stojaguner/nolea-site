@@ -414,19 +414,54 @@ textarea::placeholder {
   }
 }
 
-/* Preserve white-on-dark-panel copy inside #launch CTA on mobile */
+/* Preserve white-on-dark-panel copy inside #launch CTA on mobile.
+   The base `h2 { color: var(--text-strong) }` rule (and inline Tailwind
+   arbitrary classes) otherwise leave the heading dark-on-dark and the
+   input box nearly invisible against the #111827 panel. */
 @media (max-width: 768px) {
-  #launch p,
-  #launch h2,
-  #launch label,
+  section #launch p,
+  section #launch h2,
+  section #launch h3,
+  section #launch label,
+  section #launch span,
   .dark-panel p,
   .dark-panel h2,
   .dark-panel label {
     color: #ffffff !important;
   }
-  #launch p.text-white\/85,
-  #launch p.text-white\/95 {
-    color: rgba(255, 255, 255, 0.95) !important;
+  section #launch p.text-white\/85,
+  section #launch p.text-white\/95 {
+    color: rgba(255, 255, 255, 0.96) !important;
+  }
+
+  /* Email input: was bg-white/8 (nearly invisible) with a faint border.
+     Lift the panel-within-panel so the field is clearly a field. */
+  section #launch input[type="email"],
+  section #launch input#email {
+    background-color: rgba(255, 255, 255, 0.16) !important;
+    border-color: rgba(255, 255, 255, 0.55) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+  }
+  section #launch input[type="email"]::placeholder,
+  section #launch input#email::placeholder {
+    color: rgba(255, 255, 255, 0.85) !important;
+    opacity: 1 !important;
+  }
+  section #launch input[type="email"]:focus,
+  section #launch input#email:focus {
+    background-color: rgba(255, 255, 255, 0.22) !important;
+    border-color: #ffffff !important;
+  }
+
+  /* Submit button: cream/white pill on dark — ensure label stays ink-dark
+     against the white button background and isn't dragged white by the
+     surrounding text-white parent or other mobile overrides. */
+  section #launch button[type="submit"] {
+    background-color: #ffffff !important;
+    color: #0b1220 !important;
+    -webkit-text-fill-color: #0b1220 !important;
   }
 }
 
