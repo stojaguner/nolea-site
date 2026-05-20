@@ -16,9 +16,9 @@
   --surface-3: #e8e2d8;
 
   --text-strong: #111827;
-  --text-body: #374151;
-  --text-muted: #6b7280;
-  --text-faint: #9ca3af;
+  --text-body: #2f3744;
+  --text-muted: #4b5563;
+  --text-faint: #6b7280;
 
   --border-soft: rgba(17, 24, 39, 0.08);
   --border-medium: rgba(17, 24, 39, 0.12);
@@ -58,9 +58,9 @@
     --surface-3: #2d2823;
 
     --text-strong: #f5f1eb;
-    --text-body: #ddd7cf;
-    --text-muted: #aaa39a;
-    --text-faint: #7d776f;
+    --text-body: #e3ddd5;
+    --text-muted: #bdb6ac;
+    --text-faint: #8e8780;
 
     --border-soft: rgba(255, 255, 255, 0.08);
     --border-medium: rgba(255, 255, 255, 0.12);
@@ -332,7 +332,7 @@ textarea::placeholder {
 .dark-panel p,
 .dark-panel small,
 .dark-panel label {
-  color: rgba(255, 255, 255, 0.74);
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .dark-panel input {
@@ -340,7 +340,7 @@ textarea::placeholder {
 }
 
 .dark-panel input::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .subtle-divider {
@@ -366,6 +366,28 @@ textarea::placeholder {
 
   p {
     line-height: 1.82;
+  }
+
+  .eyebrow,
+  .text-muted,
+  small {
+    color: #374151;
+  }
+
+  .text-faint {
+    color: #4b5563;
+  }
+}
+
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  .eyebrow,
+  .text-muted,
+  small {
+    color: #d4cec5;
+  }
+
+  .text-faint {
+    color: #a8a199;
   }
 }
 

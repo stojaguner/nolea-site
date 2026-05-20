@@ -11,7 +11,8 @@
       --bg: #f5f3ef;
       --bg-alt: #ffffff;
       --text: #111111;
-      --muted: #666666;
+      --muted: #4a4a4a;
+      --muted-soft: #5a5a5a;
       --accent: #1b4d4a;
       --accent-soft: #e1ebe9;
       --pill-bg: #e8e2d8;
@@ -24,7 +25,7 @@
     .page { max-width: 1100px; margin: 0 auto; padding: 32px 20px 64px; }
     header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; margin-bottom: 48px; }
     .nav-links { display: flex; gap: 18px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; }
-    .nav-links a { opacity: 0.7; }
+    .nav-links a { color: #2a2a2a; opacity: 0.9; }
     .nav-links a:hover { opacity: 1; }
     .hero { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; align-items: flex-start; margin-bottom: 56px; }
     @media (max-width: 800px) { .hero { grid-template-columns: minmax(0, 1fr); } }
@@ -36,7 +37,7 @@
     .btn-secondary { border-radius: 999px; padding: 9px 20px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.14em; border: 1px solid var(--border); background: transparent; cursor: pointer; }
     .hero-note { font-size: 12px; color: var(--muted); }
     .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-    .pill { border-radius: 999px; padding: 6px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; background: var(--pill-bg); color: #4b4136; }
+    .pill { border-radius: 999px; padding: 6px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; background: var(--pill-bg); color: #3a3024; }
     .hero-card { background: var(--bg-alt); border-radius: 18px; padding: 20px 18px 18px; border: 1px solid var(--border); }
     .product-tag { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
     .product-name { font-size: 20px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px; }
@@ -61,7 +62,7 @@
     .list-muted { list-style: none; padding: 0; margin: 12px 0 0; font-size: 13px; color: var(--muted); }
     .list-muted li { margin-bottom: 6px; }
     .chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-    .chip { font-size: 11px; border-radius: 999px; padding: 4px 9px; background: var(--accent-soft); color: #23423f; }
+    .chip { font-size: 11px; border-radius: 999px; padding: 4px 9px; background: var(--accent-soft); color: #133230; }
     .future { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
     .future-item { border-radius: 14px; border: 1px dashed var(--border); padding: 10px 12px; background: rgba(255,255,255,0.55); font-size: 12px; max-width: 260px; }
     .future-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
@@ -74,8 +75,26 @@
     .waitlist { background: var(--bg-alt); border-radius: 18px; border: 1px solid var(--border); padding: 22px 18px 20px; margin-top: 24px; max-width: 520px; }
     .waitlist-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
     .waitlist-input { flex: 1 1 220px; min-width: 0; border-radius: 999px; border: 1px solid var(--border); padding: 10px 14px; font-size: 13px; background: #fdfbf7; }
-    footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; }
+    footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: #3a3a3a; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; }
     .footer-links { display: flex; gap: 12px; }
+    @media (max-width: 800px) {
+      :root { --muted: #3a3a3a; }
+      .eyebrow,
+      .section-heading,
+      .card-label,
+      .product-tag,
+      .product-sub,
+      .product-meta,
+      .future-label,
+      .hero-note { color: #2f2f2f; }
+      .card-body,
+      .section-intro,
+      .hero-sub,
+      .list-muted,
+      .faq-a,
+      .future-copy { color: #333333; }
+      footer { color: #2f2f2f; }
+    }
   </style>
 </head>
 <body>

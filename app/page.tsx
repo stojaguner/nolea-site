@@ -56,25 +56,25 @@ export default function HomePage() {
           <nav className="hidden items-center gap-6 md:flex">
             <a
               href="#approach"
-              className="text-sm text-[#6b7280] transition hover:text-[#111827]"
+              className="text-sm text-[#374151] transition hover:text-[#111827]"
             >
               Approach
             </a>
             <a
               href="#formula"
-              className="text-sm text-[#6b7280] transition hover:text-[#111827]"
+              className="text-sm text-[#374151] transition hover:text-[#111827]"
             >
               Formula
             </a>
             <a
               href="#routine"
-              className="text-sm text-[#6b7280] transition hover:text-[#111827]"
+              className="text-sm text-[#374151] transition hover:text-[#111827]"
             >
               Routine
             </a>
             <Link
               href="/learn"
-              className="text-sm text-[#6b7280] transition hover:text-[#111827]"
+              className="text-sm text-[#374151] transition hover:text-[#111827]"
             >
               Learn
             </Link>
@@ -88,7 +88,7 @@ export default function HomePage() {
       >
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <div>
-            <p className="mb-5 text-[11px] font-medium uppercase tracking-[0.24em] text-[#6b7280]">
+            <p className="mb-5 text-[11px] font-medium uppercase tracking-[0.24em] text-[#374151]">
               Science-backed pediatric swim-skin care
             </p>
 
@@ -96,7 +96,7 @@ export default function HomePage() {
               Protection, before it&apos;s needed.
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#4b5563] md:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#374151] md:text-lg">
               A refined, barrier-first approach to supporting children&apos;s
               skin exposed to chlorinated water—designed with restraint,
               informed by real exposure, and shaped for everyday use.
@@ -117,7 +117,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <p className="mt-8 max-w-3xl text-sm leading-7 text-[#6b7280]">
+            <p className="mt-8 max-w-3xl text-sm leading-7 text-[#374151]">
               Fragrance-free. Lightweight. Sensitive-skin minded. Developed in
               collaboration with a cosmetic chemist and university researchers,
               with oversight from a pediatric surgeon.
@@ -125,7 +125,7 @@ export default function HomePage() {
           </div>
 
           <div className="rounded-[2rem] border border-black/8 bg-white/70 p-6 backdrop-blur-sm md:p-8">
-            <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#6b7280]">
+            <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#374151]">
               Why it exists
             </p>
 
@@ -134,7 +134,7 @@ export default function HomePage() {
                 <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
                   Repeated exposure changes the need
                 </h2>
-                <p className="mt-2 text-[16px] leading-7 text-[#4b5563]">
+                <p className="mt-2 text-[16px] leading-7 text-[#374151]">
                   Swim lessons, swim team, and water polo create a pattern of
                   contact that ordinary aftercare often fails to address.
                 </p>
@@ -144,7 +144,7 @@ export default function HomePage() {
                 <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
                   Barrier support should start earlier
                 </h2>
-                <p className="mt-2 text-[16px] leading-7 text-[#4b5563]">
+                <p className="mt-2 text-[16px] leading-7 text-[#374151]">
                   Most routines begin after discomfort appears. NOLÉA
                   <sup
                     aria-label="trademark"
@@ -160,7 +160,7 @@ export default function HomePage() {
                 <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
                   Daily use should feel invisible
                 </h2>
-                <p className="mt-2 text-[16px] leading-7 text-[#4b5563]">
+                <p className="mt-2 text-[16px] leading-7 text-[#374151]">
                   The best support is the kind families will actually keep using
                   — weightless, uncomplicated, and easy to return to.
                 </p>
@@ -176,7 +176,7 @@ export default function HomePage() {
       >
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:px-8 md:py-20 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#374151]">
               The problem
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#111827] md:text-5xl">
@@ -212,7 +212,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
         <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#374151]">
               Positioning shift
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#111827] md:text-5xl">
@@ -222,7 +222,7 @@ export default function HomePage() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-[1.75rem] border border-black/8 bg-white/75 p-6">
-              <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#6b7280]">
+              <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#374151]">
                 Before swimming
               </p>
               <p className="mt-3 text-[17px] leading-8 text-[#374151]">
@@ -232,7 +232,7 @@ export default function HomePage() {
             </div>
 
             <div className="rounded-[1.75rem] border border-black/8 bg-white/75 p-6">
-              <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#6b7280]">
+              <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#374151]">
                 After swimming
               </p>
               <p className="mt-3 text-[17px] leading-8 text-[#374151]">
@@ -250,7 +250,7 @@ export default function HomePage() {
       >
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
           <div className="max-w-3xl">
-            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#374151]">
               Formulation philosophy
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#111827] md:text-5xl">
@@ -273,7 +273,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-[16px] leading-7 text-[#4b5563]">
+                <p className="mt-3 text-[16px] leading-7 text-[#374151]">
                   {item.body}
                 </p>
               </div>
@@ -288,7 +288,7 @@ export default function HomePage() {
       >
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#374151]">
               Designed for real use
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#111827] md:text-5xl">
@@ -306,7 +306,7 @@ export default function HomePage() {
                 key={item.step}
                 className="rounded-[1.75rem] border border-black/8 bg-white/80 p-6 md:p-8"
               >
-                <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#6b7280]">
+                <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#374151]">
                   {item.step} / {item.title}
                 </p>
                 <p className="mt-3 text-[17px] leading-8 text-[#374151]">
@@ -321,7 +321,7 @@ export default function HomePage() {
       <section className="border-y border-black/5 bg-[#efece5]">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:px-8 md:py-24 lg:grid-cols-[1fr_1fr]">
           <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#374151]">
               Founder
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#111827] md:text-5xl">
@@ -361,13 +361,13 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="rounded-[2rem] border border-black/8 bg-white/80 p-6 md:p-8">
-            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6b7280]">
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#374151]">
               Learn more
             </p>
             <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-[#111827] md:text-4xl">
               Explore the thinking behind barrier-first swim care.
             </h2>
-            <p className="mt-4 text-[17px] leading-8 text-[#4b5563]">
+            <p className="mt-4 text-[17px] leading-8 text-[#374151]">
               Explore practical guidance on chlorine exposure, children&apos;s
               skin, and barrier-first swim care.
             </p>
@@ -385,13 +385,13 @@ export default function HomePage() {
             className="rounded-[2rem] border border-black/8 bg-[#111827] p-6 text-white md:p-8"
             id="launch"
           >
-            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/60">
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/75">
               Launching soon
             </p>
             <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] md:text-4xl">
               Be first to know.
             </h2>
-            <p className="mt-4 max-w-xl text-[17px] leading-8 text-white/75">
+            <p className="mt-4 max-w-xl text-[17px] leading-8 text-white/85">
               Join the list for early product updates, first access, and a more
               thoughtful release timeline.
             </p>
@@ -404,7 +404,7 @@ export default function HomePage() {
                 id="email"
                 type="email"
                 placeholder="Enter your email"
-                className="min-h-[48px] flex-1 rounded-full border border-white/10 bg-white/8 px-5 text-sm text-white placeholder:text-white/45 outline-none transition focus:border-white/30"
+                className="min-h-[48px] flex-1 rounded-full border border-white/15 bg-white/8 px-5 text-sm text-white placeholder:text-white/65 outline-none transition focus:border-white/40"
               />
               <button
                 type="submit"
@@ -414,7 +414,7 @@ export default function HomePage() {
               </button>
             </form>
 
-            <p className="mt-4 text-sm leading-7 text-white/55">
+            <p className="mt-4 text-sm leading-7 text-white/70">
               Low-volume updates only.
             </p>
           </div>
