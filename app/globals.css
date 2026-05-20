@@ -366,6 +366,7 @@ textarea::placeholder {
 
   p {
     line-height: 1.82;
+    color: #1f2937;
   }
 
   .eyebrow,
@@ -377,17 +378,29 @@ textarea::placeholder {
   .text-faint {
     color: #4b5563;
   }
+
+  main p {
+    color: #1f2937;
+  }
 }
 
 @media (max-width: 768px) and (prefers-color-scheme: dark) {
+  p {
+    color: #ece7df;
+  }
+
   .eyebrow,
   .text-muted,
   small {
-    color: #d4cec5;
+    color: #e0d9cf;
   }
 
   .text-faint {
-    color: #a8a199;
+    color: #b8b1a7;
+  }
+
+  main p {
+    color: #ece7df;
   }
 }
 

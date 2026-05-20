@@ -96,7 +96,7 @@ export default function HomePage() {
               Protection, before it&apos;s needed.
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#374151] md:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#1f2937] md:text-lg">
               A refined, barrier-first approach to supporting children&apos;s
               skin exposed to chlorinated water—designed with restraint,
               informed by real exposure, and shaped for everyday use.
@@ -117,7 +117,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <p className="mt-8 max-w-3xl text-sm leading-7 text-[#374151]">
+            <p className="mt-8 max-w-3xl text-sm leading-7 text-[#1f2937]">
               Fragrance-free. Lightweight. Sensitive-skin minded. Developed in
               collaboration with a cosmetic chemist and university researchers,
               with oversight from a pediatric surgeon.
@@ -134,7 +134,7 @@ export default function HomePage() {
                 <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
                   Repeated exposure changes the need
                 </h2>
-                <p className="mt-2 text-[16px] leading-7 text-[#374151]">
+                <p className="mt-2 text-[16px] leading-7 text-[#1f2937]">
                   Swim lessons, swim team, and water polo create a pattern of
                   contact that ordinary aftercare often fails to address.
                 </p>
@@ -144,7 +144,7 @@ export default function HomePage() {
                 <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
                   Barrier support should start earlier
                 </h2>
-                <p className="mt-2 text-[16px] leading-7 text-[#374151]">
+                <p className="mt-2 text-[16px] leading-7 text-[#1f2937]">
                   Most routines begin after discomfort appears. NOLÉA
                   <sup
                     aria-label="trademark"
@@ -160,7 +160,7 @@ export default function HomePage() {
                 <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
                   Daily use should feel invisible
                 </h2>
-                <p className="mt-2 text-[16px] leading-7 text-[#374151]">
+                <p className="mt-2 text-[16px] leading-7 text-[#1f2937]">
                   The best support is the kind families will actually keep using
                   — weightless, uncomplicated, and easy to return to.
                 </p>
@@ -185,17 +185,17 @@ export default function HomePage() {
           </div>
 
           <div className="space-y-6">
-            <p className="text-[17px] leading-8 text-[#374151]">
+            <p className="text-[17px] leading-8 text-[#1f2937]">
               For children who spend meaningful time in pools, chlorinated water
               is not occasional. It is repeated, cumulative, and often reduced
               to the language of ordinary dryness.
             </p>
-            <p className="text-[17px] leading-8 text-[#374151]">
+            <p className="text-[17px] leading-8 text-[#1f2937]">
               Dryness, roughness, tightness, and heightened sensitivity often
               reflect an ongoing pattern of barrier stress rather than a one-time
               post-swim reaction.
             </p>
-            <p className="text-[17px] leading-8 text-[#374151]">
+            <p className="text-[17px] leading-8 text-[#1f2937]">
               Most products enter the routine too late. NOLÉA<sup
                 aria-label="trademark"
                 className="align-super text-[0.55em]"
@@ -225,7 +225,7 @@ export default function HomePage() {
               <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#374151]">
                 Before swimming
               </p>
-              <p className="mt-3 text-[17px] leading-8 text-[#374151]">
+              <p className="mt-3 text-[17px] leading-8 text-[#1f2937]">
                 Support the skin barrier prior to exposure, rather than waiting
                 for visible discomfort to appear.
               </p>
@@ -235,7 +235,7 @@ export default function HomePage() {
               <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#374151]">
                 After swimming
               </p>
-              <p className="mt-3 text-[17px] leading-8 text-[#374151]">
+              <p className="mt-3 text-[17px] leading-8 text-[#1f2937]">
                 Replenish hydration and help the skin settle after contact with
                 chlorine, sun, salt, and repeated washing.
               </p>
@@ -256,7 +256,7 @@ export default function HomePage() {
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#111827] md:text-5xl">
               Precision, not excess.
             </h2>
-            <p className="mt-6 text-[17px] leading-8 text-[#374151]">
+            <p className="mt-6 text-[17px] leading-8 text-[#1f2937]">
               Our approach draws from ingredients studied for their role in
               supporting skin resilience under stress, including extremolytes
               such as Ectoin and Hydroxyectoin, within lightweight systems
@@ -273,7 +273,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-[16px] leading-7 text-[#374151]">
+                <p className="mt-3 text-[16px] leading-7 text-[#1f2937]">
                   {item.body}
                 </p>
               </div>
@@ -294,7 +294,7 @@ export default function HomePage() {
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#111827] md:text-5xl">
               Simple enough to keep.
             </h2>
-            <p className="mt-6 text-[17px] leading-8 text-[#374151]">
+            <p className="mt-6 text-[17px] leading-8 text-[#1f2937]">
               Care should feel nearly imperceptible — quiet enough to become
               routine, considered enough to matter.
             </p>
@@ -309,7 +309,7 @@ export default function HomePage() {
                 <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#374151]">
                   {item.step} / {item.title}
                 </p>
-                <p className="mt-3 text-[17px] leading-8 text-[#374151]">
+                <p className="mt-3 text-[17px] leading-8 text-[#1f2937]">
                   {item.body}
                 </p>
               </div>
@@ -330,7 +330,7 @@ export default function HomePage() {
           </div>
 
           <div className="space-y-6">
-            <p className="text-[17px] leading-8 text-[#374151]">
+            <p className="text-[17px] leading-8 text-[#1f2937]">
               NOLÉA<sup
                 aria-label="trademark"
                 className="align-super text-[0.55em]"
@@ -341,16 +341,16 @@ export default function HomePage() {
               environmental exposure and how children&apos;s skin is typically
               supported.
             </p>
-            <p className="text-[17px] leading-8 text-[#374151]">
+            <p className="text-[17px] leading-8 text-[#1f2937]">
               Developed in collaboration with a cosmetic chemist and university
               researchers, with oversight from a pediatric surgeon, the brand
               reflects a restrained, evidence-led view of everyday skin
               stressors.
             </p>
-            <p className="text-[17px] leading-8 text-[#374151]">
+            <p className="text-[17px] leading-8 text-[#1f2937]">
               Built from real exposure, not theoretical need.
             </p>
-            <p className="text-[17px] leading-8 text-[#374151]">
+            <p className="text-[17px] leading-8 text-[#1f2937]">
               A brand shaped by observation, routine, and the realities of
               frequent water exposure.
             </p>
@@ -367,7 +367,7 @@ export default function HomePage() {
             <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-[#111827] md:text-4xl">
               Explore the thinking behind barrier-first swim care.
             </h2>
-            <p className="mt-4 text-[17px] leading-8 text-[#374151]">
+            <p className="mt-4 text-[17px] leading-8 text-[#1f2937]">
               Explore practical guidance on chlorine exposure, children&apos;s
               skin, and barrier-first swim care.
             </p>
@@ -385,13 +385,13 @@ export default function HomePage() {
             className="rounded-[2rem] border border-black/8 bg-[#111827] p-6 text-white md:p-8"
             id="launch"
           >
-            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/75">
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/90">
               Launching soon
             </p>
             <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] md:text-4xl">
               Be first to know.
             </h2>
-            <p className="mt-4 max-w-xl text-[17px] leading-8 text-white/85">
+            <p className="mt-4 max-w-xl text-[17px] leading-8 text-white/95">
               Join the list for early product updates, first access, and a more
               thoughtful release timeline.
             </p>
@@ -404,7 +404,7 @@ export default function HomePage() {
                 id="email"
                 type="email"
                 placeholder="Enter your email"
-                className="min-h-[48px] flex-1 rounded-full border border-white/15 bg-white/8 px-5 text-sm text-white placeholder:text-white/65 outline-none transition focus:border-white/40"
+                className="min-h-[48px] flex-1 rounded-full border border-white/15 bg-white/8 px-5 text-sm text-white placeholder:text-white/80 outline-none transition focus:border-white/40"
               />
               <button
                 type="submit"
@@ -414,7 +414,7 @@ export default function HomePage() {
               </button>
             </form>
 
-            <p className="mt-4 text-sm leading-7 text-white/70">
+            <p className="mt-4 text-sm leading-7 text-white/85">
               Low-volume updates only.
             </p>
           </div>
